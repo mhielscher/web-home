@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule source/pretty/(.*) source-display.php?file=source/$1 [L]
+</IfModule>
+
