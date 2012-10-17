@@ -4,6 +4,7 @@ http://www.wasabiflux.org/ - portfolio, GitHub, and social media.
 mhielscher@gmail.com
 (818) 389-4254
 
+
 Work Experience
 ---------------
 
@@ -22,7 +23,8 @@ Marathon Open Source Project
 March 2000 - July 2003
   - Implemented the Lua scripting language in the open source game engine Aleph One to allow greater scenario creation control.
   - Added graphical enhancements: expanded resolutions, fog effect control; and XML configuration options.
-			
+
+
 Projects
 --------
 
@@ -40,7 +42,8 @@ EigenMaze
 Java
 January 2005 - March 2005
     3D OpenGL networked game engine. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in a team environment. Totaled over 10,000 lines of code.
-		
+
+
 Distinctions and Activities
 ---------------------------
 
@@ -49,8 +52,8 @@ Distinctions and Activities
 - Organized and administered 2005, 2006, 2008 UCSB ACM Programming Contests.
 - Placed 2nd in PuzzleCrunch 2006, hosted by UIUC. Participated in Puzzlecrack 2005, 2006.
 - Only individual to earn the Continential Mathematics National C++ Contest Medal twice for top score in the nation.
-- Received the Rensselaer Polytechnic Institute Mathematics and Science Award in 2003.
-		
+
+
 Education
 ---------
 
