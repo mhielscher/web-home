@@ -12,7 +12,11 @@ article h1 {
     padding-bottom: .5em;
 }
 
-article h2 {
+article section {
+    margin-bottom: 1em;
+}
+
+article section h1 {
     font: 1.5em "Cabin Condensed", Oxygen, Arial, sans-serif;
     line-height: 1.5em;
     padding-bottom: .25em;
@@ -23,4 +27,11 @@ article p {
     line-height: 1.3em;
     padding-bottom: 1em;
     color: #1f1f1f;
+}
+
+pre {
+    font: 0.7em "Lucida Console", "Monaco", "Courier New", monospace;
+    color: #222222;
+    background-color: #f2f2f2;
+    padding: 1em 2em;
 }
