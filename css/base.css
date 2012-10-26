@@ -1,3 +1,8 @@
+/*
+* {
+    box-sizing: border-box;
+}
+*/
 body {
     width: auto;
     margin: 0;
@@ -36,7 +41,7 @@ aside#sidebar nav ul#sitenav {
     list-style: none;
     padding-top: 15px;
     text-align: center;
-    font: 1.1em 'Source Sans Pro', 'Trebuchet MS', sans-serif;
+    font: 1.1em "Source Sans Pro", "Trebuchet MS", sans-serif;
 }
 
 aside#sidebar nav ul#sitenav li {
@@ -100,7 +105,7 @@ aside#sidebar nav ul#socialnav {
         margin-right: 10px;
         padding-right: 20px;
         text-align: right;
-        font: 1.1em 'Source Sans Pro', 'Trebuchet MS', sans-serif;
+        font: 1.1em "Source Sans Pro", "Trebuchet MS", sans-serif;
         border-right: 2px solid black;
     }
 
@@ -132,7 +137,7 @@ aside#sidebar nav ul#socialnav {
         margin-right: 10px;
         padding-right: 20px;
         text-align: right;
-        font: 0.875em 'Source Sans Pro', 'Trebuchet MS', sans-serif;
+        font: 0.875em "Source Sans Pro", "Trebuchet MS", sans-serif;
         border-right: 2px solid #aaaaaa;
     }
 

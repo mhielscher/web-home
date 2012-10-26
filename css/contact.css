@@ -3,7 +3,18 @@ article ul {
 }
 
 article ul li {
-    padding-bottom: 4px;
+    padding-bottom: 0.2em;
+}
+
+article ul li ul {
+    list-style: none;
+    margin-left: 2em;
+}
+
+article ul li ul li {
+    font-size: 0.75em;
+    line-height: 1.1em;
+    padding-bottom: 0;
 }
 
 article h1 {
