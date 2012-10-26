@@ -21,22 +21,22 @@ a:hover {
     color: #4646ee;
 }
 
-#content {
+.content {
     left: 0px;
     padding: 0 20px 50px 20px;
 }
 
-aside#sidebar {
+aside.sidebar {
     display: inline;
     position: relative;
     width: auto;
 }
 
-aside#sidebar h1 {
+aside.sidebar h1 {
     display: none;
 }
 
-aside#sidebar nav ul#sitenav {
+aside.sidebar nav ul.sitenav {
     position: relative;
     list-style: none;
     padding-top: 15px;
@@ -44,25 +44,25 @@ aside#sidebar nav ul#sitenav {
     font: 1.1em "Source Sans Pro", "Trebuchet MS", sans-serif;
 }
 
-aside#sidebar nav ul#sitenav li {
+aside.sidebar nav ul.sitenav li {
     display: inline;
     padding: 0 10px 0 10px;
     border-right: 1px solid black;
 }
 
-aside#sidebar nav ul#sitenav li:last-child {
+aside.sidebar nav ul.sitenav li:last-child {
     border-right: none;
 }
 
-aside#sidebar nav ul#sitenav a {
+aside.sidebar nav ul.sitenav a {
     font-weight: normal;
 }
 
-aside#sidebar nav ul#sitenav a:hover {
+aside.sidebar nav ul.sitenav a:hover {
     color: #444444;
 }
 
-aside#sidebar nav ul#socialnav {
+aside.sidebar nav ul.socialnav {
     display: none;
 }
 
@@ -70,37 +70,36 @@ aside#sidebar nav ul#socialnav {
 
 @media only screen and (min-width:625px)
 {
-    #content {
+    .content {
         position: absolute;
         left: 200px;
         /* top right bottom left (clockwise from top) */
         padding: 0 80px 50px 80px;
     }
 
-    aside#sidebar {
+    aside.sidebar {
         position: fixed;
         left: 0px;
         top: 0;
         min-height: 100%;
         width: 200px;
         margin: 0;
-        padding-right: 40px;
-        padding-top: 40px;
+        padding-right: 2em;
+        padding-top: 1em;
         background-color: #fbfbfc;
         border-right: 1px solid #f9f9f9;
     }
 
-    aside#sidebar h1 {
+    aside.sidebar h1 {
         display: block;
         font: 2em Oxygen, "Cabin Condensed", Arial, sans-serif;
         font-weight: bold;
         line-height: 1em;
-        padding-bottom: 50px;
         letter-spacing: 2px;
         text-align: right;
     }
 
-    aside#sidebar nav ul#sitenav {
+    aside.sidebar nav ul.sitenav {
         list-style: none;
         margin-right: 10px;
         padding-right: 20px;
@@ -109,7 +108,7 @@ aside#sidebar nav ul#socialnav {
         border-right: 2px solid black;
     }
 
-    aside#sidebar nav ul#sitenav li {
+    aside.sidebar nav ul.sitenav li {
         display: block;
         padding-right: 0;
         padding-bottom: 20px;
@@ -119,18 +118,18 @@ aside#sidebar nav ul#socialnav {
 
 @media only screen and (min-width:850px)
 {
-    #content {
+    .content {
         left: 240px;
     }
     
-    aside#sidebar {
+    aside.sidebar {
         width: 240px;
     }
 }
 
-@media only screen and (min-width:625px) and (min-height:540px)
+@media only screen and (min-width:625px) and (min-height:500px)
 {
-    aside#sidebar nav ul#socialnav {
+    aside.sidebar nav ul.socialnav {
         display: block;
         list-style: none;
         margin-top: 30px;
@@ -141,17 +140,17 @@ aside#sidebar nav ul#socialnav {
         border-right: 2px solid #aaaaaa;
     }
 
-    aside#sidebar nav ul#socialnav li {
+    aside.sidebar nav ul.socialnav li {
         display: block;
         padding-bottom: 10px;
     }
 
-    aside#sidebar nav ul#socialnav a {
+    aside.sidebar nav ul.socialnav a {
         font-weight: normal;
         color: #666666;
     }
 
-    aside#sidebar nav ul#socialnav a:hover {
+    aside.sidebar nav ul.socialnav a:hover {
         color: #333333;
     }
 }
