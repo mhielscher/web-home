@@ -114,6 +114,7 @@ at bottom/footer:
     <!--Motivated computer science student with very strong communication and problem-solving skills and a deep understanding of all levels of computer abstraction.-->
 
 <article>
+    <!-- Introduction, story, objective -->
     <div class="intro">
         <section>
             <p>story</p>
@@ -121,7 +122,8 @@ at bottom/footer:
     </div>
 
     <div class="left-col">
-        <div class="portfolio">
+        <!-- Portfolio items and projects -->
+        <section class="portfolio">
             <h1>Portfolio</h1>
             <article>
                 <hgroup>
@@ -144,8 +146,9 @@ at bottom/footer:
                 </hgroup>
                 <p class="project-details">Description</p>
             </article>
-        </div>
-        <div class="jobs">
+        </section>
+        <!-- Jobs and other employment-like things I've done -->
+        <section class="jobs">
             <h1>Jobs</h1>
             <article>
                 <hgroup>
@@ -155,7 +158,182 @@ at bottom/footer:
                 </hgroup>
                 <p class="job-details">Description</p>
             </article>
-        </div>
+        </section>
+    </div>
+    
+    <div class="right-col">
+        <!-- My skills -->
+        <section class="skills">
+            <h1>Skills</h1>
+            <article>
+                <h1>Expertise</h1>
+                <table>
+                    <tr>
+                        <td>Python</td>
+                        <td>
+                            <progress class="skill" max="100" value="85">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 85%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td>
+                            <progress class="skill" max="100" value="90">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 90%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>
+                            <progress class="skill" max="100" value="75">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 75%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HTML5/CSS3</td>
+                        <td>
+                            <progress class="skill" max="100" value="40">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 40%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C++</td>
+                        <td>
+                            <progress class="skill" max="100" value="60">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 60%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>
+                            <progress class="skill" max="100" value="40">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 40%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>
+                            <progress class="skill" max="100" value="50">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 50%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Django</td>
+                        <td>
+                            <progress class="skill" max="100" value="60">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 60%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Perl</td>
+                        <td>
+                            <progress class="skill" max="100" value="40">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 40%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apache</td>
+                        <td>
+                            <progress class="skill" max="100" value="30">
+                                <!--fallback for non-HTML5 browser-->
+                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                    <div class="bar" style="width: 30%;"></div>
+                                </div>
+                            </progress>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+            <article>
+                <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                <script type="text/javascript">
+                  google.load("visualization", "1", {packages:["corechart"]});
+                  google.setOnLoadCallback(drawChart1);
+                  function drawChart1() {
+                    var data = google.visualization.arrayToDataTable([
+                      ['Skill', 'Percent Usage'],
+                      ['Python',     40],
+                      ['Linux',      30],
+                      ['Django',  10],
+                      ['HTML5/CSS3', 20]
+                    ]);
+
+                    var options = {
+                      title: 'Recently Used Skills'
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('recent_freq_chart'));
+                    chart.draw(data, options);
+                }
+                    
+                  google.setOnLoadCallback(drawChart2);
+                  function drawChart2() {
+                    var data = google.visualization.arrayToDataTable([
+                      ['Skill', 'Percent Usage'],
+                      ['Python',     15],
+                      ['Linux',      25],
+                      ['C', 10],
+                      ['C++', 15],
+                      ['Django',  4],
+                      ['HTML/CSS (all)', 9],
+                      ['Perl', 8],
+                      ['Java', 12],
+                      ['SQL', 2]
+                    ]);
+
+                    var options = {
+                      title: 'Total Skills Used'
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('longterm_freq_chart'));
+                    chart.draw(data, options);
+                  }
+                </script>
+                <h1>Frequency of Use</h1>
+                <table>
+                    <tr>
+                        <td><div id="recent_freq_chart" style="width: 300px; height: 400px;"></div></td>
+                        <td><div id="longterm_freq_chart" style="width: 300px; height: 400px;"></div></td>
+                    </tr>
+                </table>
+        </section>
+    </div>
 
     
     <section>
