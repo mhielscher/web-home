@@ -13,28 +13,44 @@ p {
 }
 
 div.intro {
-    margin: auto;
-    width: 50em;
+    margin: 0 3em;
+    max-width: 50em;
 }
 
 div.left-col {
-    float: left;
-    width: 45%;
+    width: 100%;
     padding-left: 1em;
     padding-right: 1em;
-    margin-right: 5%;
-    /*border: solid green 2px;*/
     box-sizing: border-box;
+    margin-bottom: 2em;
 }
 
 div.right-col {
-    float: left;
-    width: 45%;
-    margin-left: 5%;
+    width: 100%;
     padding-left: 1em;
     padding-right: 1em;
-    /*border: solid blue 2px;*/
     box-sizing: border-box;
+}
+
+@media only screen and (min-width:625px)
+{
+    div.left-col {
+        float: left;
+        width: 45%;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-right: 5%;
+        /*border: solid green 2px;*/
+    }
+
+    div.right-col {
+        float: left;
+        width: 45%;
+        margin-left: 5%;
+        padding-left: 1em;
+        padding-right: 1em;
+        /*border: solid blue 2px;*/
+    }
 }
 
 section.portfolio h1 {
