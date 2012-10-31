@@ -1,10 +1,265 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link href="../css/normalize.css" rel="stylesheet">
-<link href="../css/resume.css" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <title>Matthew Hielscher - Resume</title>
+        <link href='http://fonts.googleapis.com/css?family=Habibi&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+        <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+        <link href="../css/resume.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <h1>Matthew Hielscher</h1>
+            <address>
+                Portfolio, GitHub, and social media at: <a href="http://www.wasabiflux.org/">http://www.wasabiflux.org/</a><br />
+	            <a href="mailto:mhielscher@wasabiflux.org">mhielscher@wasabiflux.org</a>
+            </address>
+        </header>
+
+            <!--Motivated computer science student with very strong communication and problem-solving skills and a deep understanding of all levels of computer abstraction.-->
+
+        <article>
+            <!-- Introduction, story, objective -->
+            <div class="intro">
+                <section>
+                    <p>I'm a developer on a "forced sabbatical" looking to ease back into my career. I've professionally developed for the web, and for fun I've done game and internet application development. I'd love to get a foothold in a new area that offers varied experience with a passionate team.</p>
+                </section>
+            </div>
+
+            <div class="left-col">
+                <!-- Portfolio items and projects -->
+                <section class="portfolio">
+                    <h1>Projects</h1>
+                    <article>
+                        <hgroup>
+                            <h1><span class="project">Aggr</span><span class="language">Python</span></h1>
+                            <h2>September 2012</h2>
+                        </hgroup>
+                        <p class="project-details">A Django-based feed aggregator and filter. It lets you combine feeds, through filters, into brand new combination feeds. My first experiment with Django.</p>
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h1><span class="project">gcalc</span><span class="language">Python</span></h1>
+                            <h2>June 2012</h2>
+                        </hgroup>
+                        <p class="project-details">A command-line interface to the Google Calculator API. Designed to interface through command-line arguments, interactive input, and UNIX pipes.</p>
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h1><span class="project">WasabiScripts</span><span class="language">Python</span></h1>
+                            <h2>October 2010</h2>
+                        </hgroup>
+                        <p class="project-details">A set of Python scripts to interact with Twitter. Read your home timeline and user timelines, send tweets, retweet, and other functions on the command line.</p>
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h1><span class="project">Simplebot</span><span class="language">Python</span></h1>
+                            <h2>November 2009</h2>
+                        </hgroup>
+                        <p class="project-details">An IRC utility bot with dynamic-loaded modules and access to Wikipedia, Google, pastebin, and others.</p>
+                    </article>
+                    <article>
+                        <hgroup>
+                            <h1><span class="project"><a href="http://source.bungie.org/">Aleph One</a></span><span class="language">C++</span></h1>
+                            <h2>May 2003</h2>
+                        </hgroup>
+                        <p class="project-details">During the summer after high school, I added a much-asked-for Lua scripting interface to Aleph One. Before that, I contributed support for widescreen resolutions and additional XML configuration options.</p>
+                    </article>
+                </section>
+                <!-- Jobs and other employment-like things I've done -->
+                <section class="jobs">
+                    <h1>Jobs</h1>
+                    <article>
+                        <hgroup>
+                            <h1><span class="company">FileYourTaxes.com</span><span class="position">Junior Programmer</span></h1>
+                            <h2><span class="date">June 2005 &ndash; May 2006</span><span class="location">Ventura, CA</span></h2>
+                        </hgroup>
+                        <p class="job-details">I wrote state income tax e-filing logic in Perl, administered the office network, and developed an archival and retrieval system for older tax returns.</p>
+                    </article>
+                </section>
+            </div>
+            
+            <div class="right-col">
+                <!-- My skills -->
+                <section class="skills">
+                    <h1>Skills</h1>
+                    <article>
+                        <h1>Expertise</h1>
+                        <table>
+                            <tr>
+                                <td>Python</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="85">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 85%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="90">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 90%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="75">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 75%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HTML5/CSS3</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="40">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>C++</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="60">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 60%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SQL</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="40">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="50">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 50%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Django</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="60">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 60%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Perl</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="40">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Apache</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="30">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 30%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article>
+                        <h1>Frequency of Use</h1>
+                        <div id="recent_freq_chart">fallback</div>
+                        <div id="longterm_freq_chart">fallback</div>
+                    </article>
+                </section>
+            </div>
+        </article>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+          google.load("visualization", "1", {packages:["corechart"]});
+          google.setOnLoadCallback(drawChart1);
+          function drawChart1() {
+            var data = google.visualization.arrayToDataTable([
+              ['Skill', 'Percent Usage'],
+              ['Python',     40],
+              ['Django',  10],
+              ['HTML/CSS', 20],
+              ['Linux',      30]
+            ]);
+
+            var options = {
+              title: 'Recently Used Skills',
+              chartArea: {left: 10, top: 15, width: "100%", height: "90%"},
+              legend: {position: 'none'},
+              pieSliceText: 'label',
+              pieSliceTextStyle: {color: 'white', fontName: 'Arial', fontSize: '12'}
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('recent_freq_chart'));
+            chart.draw(data, options);
+        }
+            
+          google.setOnLoadCallback(drawChart2);
+          function drawChart2() {
+            var data = google.visualization.arrayToDataTable([
+              ['Skill', 'Percent Usage'],
+              ['Python',     15],
+              ['Django',  4],
+              ['HTML, CSS', 9],
+              ['Linux',      25],
+              ['C', 10],
+              ['C++', 15],
+              ['Perl', 8],
+              ['Java', 12],
+              ['SQL', 2]
+            ]);
+
+            var options = {
+              title: 'Total Skills Used',
+              chartArea: {left: 10, top: 15, width: "100%", height: "90%"},
+              legend: {position: 'none'},
+              pieSliceText: 'label',
+              pieSliceTextStyle: {color: 'white', fontName: 'Arial', fontSize: '12'}
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('longterm_freq_chart'));
+            chart.draw(data, options);
+          }
+        </script>
+    </body>
+</html>
+
 <!--
 Projects/portfolio
     skills used
@@ -103,338 +358,3 @@ at bottom/footer:
 
 <div style="height: 1000px;"></div>
 -->
-<header>
-    <h1>Matthew Hielscher</h1>
-    <address>
-        Portfolio, GitHub, and social media at: http://www.wasabiflux.org/<br />
-	    mhielscher@gmail.com\\(818) 389-4254
-    </address>
-</header>
-
-    <!--Motivated computer science student with very strong communication and problem-solving skills and a deep understanding of all levels of computer abstraction.-->
-
-<article>
-    <!-- Introduction, story, objective -->
-    <div class="intro">
-        <section>
-            <p>I'm a developer on a "forced sabbatical" looking to ease back into my career. I've professionally developed for the web, and for fun I've done game and internet application development. I'd love to get a foothold in a new area that offers varied experience with a passionate team.</p>
-        </section>
-    </div>
-
-    <div class="left-col">
-        <!-- Portfolio items and projects -->
-        <section class="portfolio">
-            <h1>Projects</h1>
-            <article>
-                <hgroup>
-                    <h1>Aggr</h1><h2>Python</h2>
-                    <h3>September 2012</h3>
-                </hgroup>
-                <p class="project-details">A Django-based feed aggregator and filter. It lets you combine feeds, through filters, into brand new combination feeds. My first experiment with Django.</p>
-            </article>
-            <article>
-                <hgroup>
-                    <h1>gcalc</h1><h2>Python</h2>
-                    <h3>June 2012</h3>
-                </hgroup>
-                <p class="project-details">A command-line interface to the Google Calculator API. Designed to interface through command-line arguments, interactive input, and UNIX pipes.</p>
-            </article>
-            <article>
-                <hgroup>
-                    <h1>WasabiScripts</h1><h2>Python</h2>
-                    <h3>October 2010</h3>
-                </hgroup>
-                <p class="project-details">A set of Python scripts to interact with Twitter. Read your home timeline and user timelines, send tweets, retweet, and other functions on the command line.</p>
-            </article>
-            <article>
-                <hgroup>
-                    <h1>Simplebot</h1><h2>Python</h2>
-                    <h3>November 2009</h3>
-                </hgroup>
-                <p class="project-details">An IRC utility bot with dynamic-loaded modules and access to Wikipedia, Google, pastebin, and others.</p>
-            </article>
-            <article>
-                <hgroup>
-                    <h1><a href="http://source.bungie.org/">Aleph One</a></h1><h2>C++</h2>
-                    <h3>May 2003</h3>
-                </hgroup>
-                <p class="project-details">During the summer after high school, I added a much-asked-for Lua scripting interface to Aleph One. Before that, I contributed support for widescreen resolutions and additional XML configuration options.</p>
-            </article>
-        </section>
-        <!-- Jobs and other employment-like things I've done -->
-        <section class="jobs">
-            <h1>Jobs</h1>
-            <article>
-                <hgroup>
-                    <h1>FileYourTaxes.com</h1><h2>Junior Programmer</h2>
-                    <h3>June 2005 &ndash; May 2006</h3><h4>Ventura, CA</h4>
-                </hgroup>
-                <p class="job-details">I wrote state income tax e-filing logic in Perl, administered the office network, and developed an archival and retrieval system for older tax returns.</p>
-            </article>
-        </section>
-    </div>
-    
-    <div class="right-col">
-        <!-- My skills -->
-        <section class="skills">
-            <h1>Skills</h1>
-            <article>
-                <h1>Expertise</h1>
-                <table>
-                    <tr>
-                        <td>Python</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="85">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 85%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Linux</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="90">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 90%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="75">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 75%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>HTML5/CSS3</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="40">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 40%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>C++</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="60">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 60%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SQL</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="40">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 40%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="50">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 50%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Django</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="60">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 60%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Perl</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="40">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 40%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Apache</td>
-                        <td class="bar">
-                            <progress class="skill" max="100" value="30">
-                                <!--fallback for non-HTML5 browser-->
-                                <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                    <div class="bar" style="width: 30%;"></div>
-                                </div>
-                            </progress>
-                        </td>
-                    </tr>
-                </table>
-            </article>
-            <article>
-                <h1>Frequency of Use</h1>
-                <div id="recent_freq_chart">fallback</div>
-                <div id="longterm_freq_chart">fallback</div>
-            </article>
-        </section>
-    </div>
-
-    <!--
-    <section>
-        <h1>WORK EXPERIENCE<h1> 
-		\vspace{6pt}
-			\begin{ncolumn}{3}
-				{\bf Junior Programmer}&{\sl FileYourTaxes.com}&\hfill June 2005 -- May 2006\\
-				\multicolumn{3}{p{6.4in}}{
-					\begin{work_list}
-						\item Developed e-filing logic and interface in Perl to match state tax return specifications.
-						%\item Converted state tax return specifications to e-filing logic and interface.
-						\item Built an extension to tax preparation system to allow on-the-fly extraction of compressed archived client data across a distributed network of servers.
-						\item Designed secure network device to function as a firewall and safe fileserver for sensitive data. Implemented redundant security features, automatic proprietary software updates, and web configuration interface.
-						\item Developed web server log analysis tool with PHP and Perl.
-						%% This next item --could-be-- has been shortened, but shouldn't be entirely left out.
-						\item Managed workstations and server running Red Hat Enterprise. Managed Apache, NIS, and Samba.
-					\end{work_list}}\\ \\ \\
-				{\bf Contributor}&{\sl Marathon Open Source Project}&\hfill March 2000 -- July 2003\\
-				\multicolumn{3}{p{6.4in}}{
-					\begin{work_list}
-						\item Implemented the {\sl Lua} scripting language in the open source game engine Aleph One to allow greater scenario creation control.
-						\item Added graphical enhancements: expanded resolutions, fog effect control; and XML configuration options.
-					\end{work_list}}\\ \\ \\
-			\end{ncolumn}
-			
-		\vspace{-0.2in}
-		\section{\centerline{PROJECTS}}
-			\vspace{6pt}
-			
-			%Project Name			Language				date range -- date range
-			%Description of project
-\renewcommand\arraystretch{1.1} % 1.0 is for standard spacing
-			\begin{ncolumn}{3}
-				{\bf Simplebot}&{\sl Python}&\hfill September 2009 -- February 2010\\
-				\multicolumn{3}{p{6.4in}}{IRC utility bot for channel moderation and information reference, with access to Google, Wikipedia, and pastebin.com. Runtime loadable command modules, user authentication and access levels, XML configuration.}\\ \\
-				{\bf Robot Arena}&{\sl C++, Java}&\hfill October 2008 -- December 2008\\
-				\multicolumn{3}{p{6.4in}}{Simulation of intelligent competitive agents using various AI algorithms and parameterization improved by genetic algorithms. Graphical interface in Java, backend in C++.}\\ \\
-				{\bf EigenMaze}&{\sl Java}&\hfill January 2005 -- March 2005\\
-				\multicolumn{3}{p{6.4in}}{3D OpenGL networked game engine. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in a team environment. Totaled over 10,000 lines of code.}\\ \\
-			\end{ncolumn}
-		
-
-		\vspace{-0.2in} 
-		\section{\centerline{DISTINCTIONS AND ACTIVITIES}} 
-			\vspace{12pt}
-
-			%{\bf Applied Programming}  
-			%\begin{itemize} \itemsep -2pt % reduce space between items
-				%\item {\bf Languages:} C/C++, Java, Objective-C, PHP, Perl, bash; {\bf Markup:} \LaTeX, HTML, CSS
-				%\item Developed a 3D OpenGL networked game engine in Java in a team programming environment. Totaled over 10,000 lines of code, written in 10 weeks.
-				%\item Implemented the {\sl Lua} scripting language in the open source game engine Aleph One to allow greater scenario creation control.
-				%\item Designed an extension to an existing tax preparation system in Perl to allow on-the-fly extraction of compressed archived client data across a distributed network of servers.
-				%\item Worked on a GUI module for the interpreted language Davinci, using JNI and Swing.
-			%\end{itemize}
-
-			%{\bf System Administration}
-			%\begin{itemize} \itemsep -2pt
-				%\item Managed several workstations and servers running Redhat Server and Gentoo. Configured and maintained services such as Apache, FTP, SMTP, IMAP, NIS, CVS, and Samba.
-				%\item Designed secure network device to function as a firewall and safe fileserver for sensitive data. Implemented redundant security features, automatic software updates, and web configuration interface. 
-				%\item Wrote scripts in Perl and PHP for web server log analysis.
-			%\end{itemize}
-
-			%{\bf Distinctions and Activities}
-			\begin{itemize} \itemsep -2pt
-				%\item Member of UCSB ACM chapter.
-				\item Ranked 5th of 49 teams in 2008 Southern California Regionals of the ACM International Collegiate Programming Contest. Top 10 in 2004.
-				\item Organized and administered 2005, 2006, 2008 UCSB ACM Programming Contests.
-				\item Placed 2nd in PuzzleCrunch 2006, hosted by UIUC. Participated in Puzzlecrack 2005, 2006.
-				%\item Only individual to earn the Continential Mathematics National C++ Contest Medal twice for top score in the nation.
-				%\item Received the Rensselaer Polytechnic Institute Mathematics and Science Award in 2003.
-			\end{itemize}
-		
-
-		\vspace{-0.1in}
-		\section{\centerline{EDUCATION}} 
-			\vspace{2pt} 
-			% {\sl Various certificates} \hfill 4 courses completed (expected) \\
-			% Udacity, http://www.udacity.com/ \hfill 2012 -- present \\ \\
-			{\sl Bachelor of Science}, Computer Science \hfill 104 of 132 major quarter-units completed \\
-			University of California, Santa Barbara \hfill 2003 -- 2009
-			% 120 UCSB quarter-units completed
-			% 65.5 transfer units
-			% total 185.5 quarter-units
-			% 104/132 major credits completed (96 UCSB + 8 AP Calc)
--->
-<!--
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-  google.load("visualization", "1", {packages:["corechart"]});
-  //google.setOnLoadCallback(drawChart1);
-  function drawChart1() {
-    var data = google.visualization.arrayToDataTable([
-      ['Skill', 'Percent Usage'],
-      ['Python',     40],
-      ['Django',  10],
-      ['HTML5/CSS3', 20],
-      ['Linux',      30]
-    ]);
-
-    var options = {
-      title: 'Recently Used Skills',
-      backgroundColor: '#FF3333',
-      chartArea: {left: 10, top: 18, width: "100%", height: "100%"},
-      legend: {position: 'none'},
-      pieSliceText: 'label',
-      pieSliceTextStyle: {color: 'white', fontName: 'Arial', fontSize: '12'}
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('recent_freq_chart'));
-    chart.draw(data, options);
-}
-    
-  //google.setOnLoadCallback(drawChart2);
-  function drawChart2() {
-    var data = google.visualization.arrayToDataTable([
-      ['Skill', 'Percent Usage'],
-      ['Python',     15],
-      ['Django',  4],
-      ['HTML/CSS (all)', 9],
-      ['Linux',      25],
-      ['C', 10],
-      ['C++', 15],
-      ['Perl', 8],
-      ['Java', 12],
-      ['SQL', 2]
-    ]);
-
-    var options = {
-      title: 'Total Skills Used'
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('longterm_freq_chart'));
-    chart.draw(data, options);
-  }
-</script>
--->
-</body>
-</html>

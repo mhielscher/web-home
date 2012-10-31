@@ -1,5 +1,5 @@
 body {
-    font: 100% Georgia, serif;
+    font: 92.5% Habibi, Georgia, serif;
     background-color: #fefef8;
 }
 
@@ -9,7 +9,7 @@ header {
 
 p {
     text-align: justify;
-    margin-bottom: 1em;
+    margin-bottom: 1.25em;
 }
 
 div.intro {
@@ -19,24 +19,27 @@ div.intro {
 
 div.left-col {
     float: left;
-    width: 50%;
+    width: 45%;
     padding-left: 1em;
-    padding-right: 6em;
-    border: solid green 2px;
+    padding-right: 1em;
+    margin-right: 5%;
+    /*border: solid green 2px;*/
     box-sizing: border-box;
 }
 
 div.right-col {
     float: left;
-    width: 50%;
+    width: 45%;
+    margin-left: 5%;
     padding-left: 1em;
     padding-right: 1em;
-    border: solid blue 2px;
+    /*border: solid blue 2px;*/
     box-sizing: border-box;
 }
 
 section.portfolio h1 {
     font-size: 1.2em;
+    text-decoration: underline;
 }
 
 section.portfolio article hgroup {
@@ -44,30 +47,35 @@ section.portfolio article hgroup {
 }
 
 section.portfolio article hgroup h1 {
-    display: inline;
     font-size: 1.0em;
-    font-weight: normal;
+    font-weight: none;
+    text-decoration: none;
     line-height: 0.6em;
+}
+
+section.portfolio article hgroup h1 span.project {
+    font-weight: bold;
+    margin-right: 2em;
+}
+
+section.portfolio article hgroup h1 span.language {
+    font-style: italic;
 }
 
 section.portfolio article hgroup h2 {
-    display: inline;
-    font-size: 1.0em;
-    font-weight: normal;
-    font-style: italic;
-    padding-left: 2em;
-    line-height: 0.6em;
-}
-
-section.portfolio article hgroup h3 {
     font-size: 0.9em;
     font-weight: normal;
-    line-height: 0.8em;
+    line-height: 0.6em;
     margin: 0;
+}
+
+section.portfolio article p.project-details {
+    margin-top: 0.5em;
 }
 
 section.jobs h1 {
     font-size: 1.2em;
+    text-decoration: underline;
 }
 
 section.jobs article hgroup {
@@ -75,27 +83,37 @@ section.jobs article hgroup {
 }
 
 section.jobs article hgroup h1 {
-    display: inline;
     font-size: 1.0em;
     font-weight: normal;
+    line-height: 0.6em;
+    text-decoration: none;
+}
+
+section.jobs article hgroup h1 span.company {
+    font-weight: bold;
+    margin-right: 2em;
+}
+
+section.jobs article hgroup h1 span.position {
+    font-weight: normal;
+    font-style: italic;
 }
 
 section.jobs article hgroup h2 {
-    display: inline;
-    font-size: 1.0em;
-    font-weight: normal;
-    font-style: italic;
-    padding-left: 2em;
-}
-
-section.jobs article hgroup h3 {
     font-size: 0.9em;
     font-weight: normal;
+    line-height: 0.6em;
 }
 
-section.jobs article hgroup h4 {
-    font-size: 0.9em;
-    font-weight: normal;
+section.jobs article hgroup h2 span.date {
+    margin-right: 2em;
+}
+
+section.jobs article hgroup h2 span.location {
+}
+
+section.jobs article p.job-details {
+    margin-top: 0.5em;
 }
 
 section.skills h1 {
@@ -256,13 +274,13 @@ div#recent_freq_chart {
     width: 90%;
     margin: 0 auto;
     height: 240px;
-    border: solid red 2px;
+    /*border: solid red 2px;*/
 }
 
 div#longterm_freq_chart {
     width: 90%;
     margin: 0 auto;
     height: 240px;
-    border: solid green 2px;
+    /*border: solid green 2px;*/
 }
 
