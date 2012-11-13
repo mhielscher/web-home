@@ -10,7 +10,7 @@
         <header>
             <h1>Matthew Hielscher</h1>
             <address>
-                Portfolio, GitHub, and social media at: <a href="http://www.wasabiflux.org/">http://www.wasabiflux.org/</a><br />
+                <a href="http://www.wasabiflux.org/">Home</a> - <a href="http://github.com/mhielscher">GitHub</a> - <a href="http://www.<br />
 	            <a href="mailto:mhielscher@wasabiflux.org">mhielscher@wasabiflux.org</a>
             </address>
         </header>
@@ -97,34 +97,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Linux</td>
-                                <td class="bar">
-                                    <progress class="skill" max="100" value="80">
-                                        <!--fallback for non-HTML5 browser-->
-                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                            <div class="bar" style="width: 80%;"></div>
-                                        </div>
-                                    </progress>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>C</td>
                                 <td class="bar">
                                     <progress class="skill" max="100" value="70">
                                         <!--fallback for non-HTML5 browser-->
                                         <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
                                             <div class="bar" style="width: 70%;"></div>
-                                        </div>
-                                    </progress>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>HTML5/CSS3</td>
-                                <td class="bar">
-                                    <progress class="skill" max="100" value="40">
-                                        <!--fallback for non-HTML5 browser-->
-                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                            <div class="bar" style="width: 40%;"></div>
                                         </div>
                                     </progress>
                                 </td>
@@ -141,17 +119,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>SQL</td>
-                                <td class="bar">
-                                    <progress class="skill" max="100" value="40">
-                                        <!--fallback for non-HTML5 browser-->
-                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                            <div class="bar" style="width: 40%;"></div>
-                                        </div>
-                                    </progress>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>Java</td>
                                 <td class="bar">
                                     <progress class="skill" max="100" value="50">
@@ -163,23 +130,56 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Django</td>
-                                <td class="bar">
-                                    <progress class="skill" max="100" value="60">
-                                        <!--fallback for non-HTML5 browser-->
-                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
-                                            <div class="bar" style="width: 60%;"></div>
-                                        </div>
-                                    </progress>
-                                </td>
-                            </tr>
-                            <tr>
                                 <td>Perl</td>
                                 <td class="bar">
                                     <progress class="skill" max="100" value="40">
                                         <!--fallback for non-HTML5 browser-->
                                         <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
                                             <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="80">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 80%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HTML5/CSS3</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="40">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SQL</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="40">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 40%;"></div>
+                                        </div>
+                                    </progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Django</td>
+                                <td class="bar">
+                                    <progress class="skill" max="100" value="60">
+                                        <!--fallback for non-HTML5 browser-->
+                                        <div class="progress" style="margin: 10px 0 10px 0; height: 22px;">
+                                            <div class="bar" style="width: 60%;"></div>
                                         </div>
                                     </progress>
                                 </td>
@@ -220,10 +220,12 @@
 
             var options = {
               title: 'Recently Used Skills',
+              backgroundColor: 'transparent',
               chartArea: {left: 10, top: 15, width: "100%", height: "90%"},
               legend: {position: 'none'},
               pieSliceText: 'label',
-              pieSliceTextStyle: {color: 'white', fontName: 'Arial', fontSize: '12'}
+              pieSliceTextStyle: {color: 'black', fontName: 'Habibi, Georgia', fontSize: '12'},
+              slices: [{color: '#FF9A2E'}, {color: '#B35320'}, {color: '#B39F57'}, {color: '#FFF87D', textStyle: {color: 'black'}}]
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('recent_freq_chart'));
@@ -236,7 +238,7 @@
               ['Skill', 'Percent Usage'],
               ['Python',     15],
               ['Django',  4],
-              ['HTML, CSS', 9],
+              ['HTML/CSS', 9],
               ['Linux',      25],
               ['C', 10],
               ['C++', 15],
@@ -247,10 +249,12 @@
 
             var options = {
               title: 'Total Skills Used',
+              backgroundColor: 'transparent',
               chartArea: {left: 10, top: 15, width: "100%", height: "90%"},
               legend: {position: 'none'},
               pieSliceText: 'label',
-              pieSliceTextStyle: {color: 'white', fontName: 'Arial', fontSize: '12'}
+              pieSliceTextStyle: {color: 'black', fontName: 'Habibi, Georgia', fontSize: '12'},
+              slices: [{color: '#FF9A2E'}, {color: '#B35320'}, {color: '#B39F57', textStyle: {fontSize: '10'}}, {color: '#FFF87D', textStyle: {color: 'black'}}, {color: '#E4D79D', textStyle: {color: 'black'}}, {color: '#E57817'}, {color: '#F86B34'}, {color: '#E6A81F'}, {color: '#F08708'}]
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('longterm_freq_chart'));

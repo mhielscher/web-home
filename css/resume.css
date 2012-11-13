@@ -1,10 +1,23 @@
 body {
     font: 92.5% Habibi, Georgia, serif;
-    background-color: #fefef8;
+    background-color: #fefef6;
+    background-image: -moz-linear-gradient(top, #e8e8dd 0%, #fefef6 15%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e8e8dd), color-stop(0.15, #fefef6));
+    background-image: -webkit-linear-gradient(top, #e8e8dd 0%, #fefef6 15%);
+    background-image: -ms-linear-gradient(top, #e8e8dd 0%, #fefef6 15%);
+	background-image: -o-linear-gradient(top, #e8e8dd 0%, #fefef6 15%);
+    background-image: linear-gradient(top, #e8e8dd 0%, #fefef6 15%);
+    color: #181818;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 header {
-    margin-left: 1em;
+    margin: 0 1em 1em 1em;
+}
+
+header h1 {
+    margin-bottom: 0;
 }
 
 p {
@@ -12,24 +25,33 @@ p {
     margin-bottom: 1.25em;
 }
 
+a {
+    text-decoration: none;
+    color: #C44300;
+}
+
 div.intro {
-    margin: 0 3em;
+    margin: 0 auto;
+    padding: 0 3em;
     max-width: 50em;
 }
 
 div.left-col {
     width: 100%;
+    max-width: 480px;
     padding-left: 1em;
     padding-right: 1em;
     box-sizing: border-box;
-    margin-bottom: 2em;
+    margin: 0 auto 2em auto;
 }
 
 div.right-col {
     width: 100%;
+    max-width: 480px;
     padding-left: 1em;
     padding-right: 1em;
     box-sizing: border-box;
+    margin: 0 auto 2em auto;
 }
 
 @media only screen and (min-width:625px)
@@ -204,7 +226,7 @@ progress.skill::-webkit-progress-bar {
 /* Firefox */
 progress.skill::-moz-progress-bar {
     border-radius: 5px;
-	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+	background-image: -moz-linear-gradient(top, #FA9812, #D86010);
 	-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     -moz-box-sizing: border-box;
@@ -214,8 +236,8 @@ progress.skill::-moz-progress-bar {
 /* Chrome */
 progress.skill::-webkit-progress-value {
     border-radius: 5px;
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
-	background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FA9812), to(#D86010));
+	background-image: -webkit-linear-gradient(top, #FA9812, #D86010);
 	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 	-webkit-box-sizing: border-box;
@@ -225,10 +247,10 @@ progress.skill::-webkit-progress-value {
 /* Polyfill */
 progress.skill[aria-valuenow]:before {
 	border-radius: 5px;
-	background-image: -moz-linear-gradient(top, #149bdf, #0480be);
-	background-image: -ms-linear-gradient(top, #149bdf, #0480be);
-	background-image: -o-linear-gradient(top, #149bdf, #0480be);
-    background-image: linear-gradient(to bottom, #149bdf, #0480be);
+	background-image: -moz-linear-gradient(top, #FA9812, #C86010);
+	background-image: -ms-linear-gradient(top, #FA9812, #C86010);
+	background-image: -o-linear-gradient(top, #FA9812, #C86010);
+    background-image: linear-gradient(to bottom, #FA9812, #C86010);
 }
 
 
