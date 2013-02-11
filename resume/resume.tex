@@ -6,16 +6,16 @@
 \usepackage{newcent}   % uses new century schoolbook postscript font 
 %\usepackage{baskervald} % baskerville substitute (not installed)
 \newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage[demo]{graphicx}
 \usepackage{fancyhdr}  % use this package to get a 2 line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
-\setlength{\headheight}{12pt} % allow room for 2-line header
+\setlength{\headheight}{23.1pt} % allow room for 2-line header
 \setlength{\headsep}{12pt}  % space between header and text
-\setlength{\headheight}{12pt} % allow room for 2-line header
 \pagestyle{fancy}     % set pagestyle for document
 \rhead{ {\it M. Hielscher}\\{\it p. \thepage} } % put text in header (right side)
 \cfoot{}                                     % the foot is empty
-\topmargin=-0.4in % start text higher on the page
-\textheight=9.0in
+\topmargin=-0.8in % start text higher on the page
+\textheight=9.4in
 
 \newenvironment{work_list}{
 \begin{itemize}
@@ -25,7 +25,9 @@
 }{\end{itemize}}
 
 \begin{document}
-	\thispagestyle{empty} % this page has no header  
+	\thispagestyle{empty}{
+	    \fancyhead[L]{\includegraphics[width=1.5cm]{logo.png}}
+    }  
 	\name{\huge{Matthew Hielscher}}
 
 
@@ -49,6 +51,13 @@
 		\section{\centerline{WORK EXPERIENCE}} 
 		\vspace{6pt}
 			\begin{ncolumn}{3}
+			    {\bf Freelance Programmer}&{\sl Self-employed}&\hfill November 2012 -- present\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Designed and built Pictoral.org Facebook search engine, including indexer and crawlers.
+						\item Wrote batch YouTube search scraper to keep accurate view counts on AlexanderPerls.com.
+						\item Added parsing for older XML and APS formats of patent grant data to existing parser script.
+					\end{work_list}}\\ \\ \\
 				{\bf Junior Programmer}&{\sl FileYourTaxes.com}&\hfill June 2005 -- May 2006\\
 				\multicolumn{3}{p{6.4in}}{
 					\begin{work_list}
@@ -60,12 +69,6 @@
 						%% This next item --could-be-- has been shortened, but shouldn't be entirely left out.
 						\item Managed workstations and server running Red Hat Enterprise. Managed NIS with Samba.
 					\end{work_list}}\\ \\ \\
-				{\bf Contributor}&{\sl Marathon Open Source Project}&\hfill March 2000 -- July 2003\\
-				\multicolumn{3}{p{6.4in}}{
-					\begin{work_list}
-						\item Implemented the {\sl Lua} scripting language in the open source game engine Aleph One to allow greater scenario creation control.
-						\item Added graphical enhancements: expanded resolutions, fog effect control; and XML configuration options.
-					\end{work_list}}\\ \\ \\
 			\end{ncolumn}
 			
 		\vspace{-0.2in}
@@ -76,36 +79,26 @@
 			%Description of project
 \renewcommand\arraystretch{1.1} % 1.0 is for standard spacing
 			\begin{ncolumn}{3}
-			    {\bf Aggr}&{\sl Python+Django}&\hfill September 2012 -- present\\
-			    \multicolumn{3}{p{6.4in}}{A web application for aggregating, filtering, and reading RSS and Atom feeds.}\\ \\
+			    {\bf Aggr}&{\sl Django}&\hfill September 2012 -- present\\
+			    \multicolumn{3}{p{6.4in}}{Web application for aggregating, filtering, and reading RSS and Atom feeds. Inspired by the need to track job postings across many sites.}\\ \\
+			    
 				{\bf Simplebot}&{\sl Python}&\hfill September 2009 -- February 2010\\
-				\multicolumn{3}{p{6.4in}}{IRC utility bot for channel moderation and information reference, with access to Google, Wikipedia, and pastebin.com. Runtime loadable command modules, user authentication and access levels, XML configuration.}\\ \\
+				\multicolumn{3}{p{6.4in}}{IRC bot for channel moderation and reference, with access to Google, Wikipedia, and pastebin.com. Runtime loadable command modules, user authentication and access levels, XML configuration.}\\ \\
+				
 				{\bf Robot Arena}&{\sl C++, Java}&\hfill October 2008 -- December 2008\\
-				\multicolumn{3}{p{6.4in}}{Simulation of intelligent competitive agents using various AI algorithms and parameterization improved by genetic algorithms. Graphical interface in Java, backend in C++.}\\ \\
+				\multicolumn{3}{p{6.4in}}{Simulation of intelligent competitive agents using various AI algorithms and parameterization improved by genetic algorithms. GUI in Java, backend in C++.}\\ \\
+				
 				{\bf EigenMaze}&{\sl Java}&\hfill January 2005 -- March 2005\\
-				\multicolumn{3}{p{6.4in}}{3D OpenGL networked game engine. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in a team environment. Totaled 10,000 lines of code.}\\ \\
+				\multicolumn{3}{p{6.4in}}{3D OpenGL networked game engine. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in an Agile team environment.}\\ \\
+				
+				{\bf Aleph One}&{\sl C++}&\hfill March 2000 -- July 2003\\
+				\multicolumn{3}{p{6.4in}}{Implemented the {\sl Lua} scripting language in the game engine to allow greater scenario creation control. Added graphical enhancements: more resolutions, fog effect control; and XML configuration options.}\\ \\
 			\end{ncolumn}
 		
 
 		\vspace{-0.2in} 
 		\section{\centerline{DISTINCTIONS AND ACTIVITIES}} 
 			\vspace{12pt}
-
-			%{\bf Applied Programming}  
-			%\begin{itemize} \itemsep -2pt % reduce space between items
-				%\item {\bf Languages:} C/C++, Java, Objective-C, PHP, Perl, bash; {\bf Markup:} \LaTeX, HTML, CSS
-				%\item Developed a 3D OpenGL networked game engine in Java in a team programming environment. Totaled over 10,000 lines of code, written in 10 weeks.
-				%\item Implemented the {\sl Lua} scripting language in the open source game engine Aleph One to allow greater scenario creation control.
-				%\item Designed an extension to an existing tax preparation system in Perl to allow on-the-fly extraction of compressed archived client data across a distributed network of servers.
-				%\item Worked on a GUI module for the interpreted language Davinci, using JNI and Swing.
-			%\end{itemize}
-
-			%{\bf System Administration}
-			%\begin{itemize} \itemsep -2pt
-				%\item Managed several workstations and servers running Redhat Server and Gentoo. Configured and maintained services such as Apache, FTP, SMTP, IMAP, NIS, CVS, and Samba.
-				%\item Designed secure network device to function as a firewall and safe fileserver for sensitive data. Implemented redundant security features, automatic software updates, and web configuration interface. 
-				%\item Wrote scripts in Perl and PHP for web server log analysis.
-			%\end{itemize}
 
 			%{\bf Distinctions and Activities}
 			\begin{itemize} \itemsep -2pt
@@ -123,7 +116,7 @@
 			\vspace{2pt} 
 			{\sl Various certificates} \hfill 3 courses w/ Highest Distinction, 1 course w/ High Distinction \\
 			Udacity, http://www.udacity.com/ \hfill 2012 -- present \\ \\
-			{\sl Bachelor of Science}, Computer Science \hfill 104 of 132 major quarter-units completed \\
+			{\sl Bachelor of Science (inc.)}, Computer Science \hfill 148 of 180 units completed \\
 			University of California, Santa Barbara \hfill 2003 -- 2009
 			% 120 UCSB quarter-units completed
 			% 65.5 transfer units
