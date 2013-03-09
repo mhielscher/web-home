@@ -34,6 +34,11 @@ Work Experience
 Projects
 --------
 
+### [QCOChat][16]
+#### February 2013 -- present
+
+Video conferencing and chat web app using WebRTC. Under development to replace [TinyChat][17] as a hangout for a group of friends.
+
 ### [Simplebot][4]
 #### September 2009 -- February 2010  
 
@@ -92,4 +97,6 @@ September 2003 -- March 2009
 [13]: http://www.wasabiflux.org/resume/resume.pdf
 [14]: http://www.wasabiflux.org/resume/resume.md
 [15]: http://www.wasabiflux.org/resume/resume.txt
+[16]: http://github.com/mhielscher/qcochat
+[17]: http://tinychat.com/
 
