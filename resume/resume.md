@@ -5,7 +5,7 @@ Matthew Hielscher
 - Github: [http://github.com/mhielscher](http://github.com/mhielscher "Github")
 - Twitter: [http://twitter.com/mhielscher](http://twitter.com/mhielscher "Twitter")
 - oDesk: [Profile](https://www.odesk.com/o/profiles/users/_~0183f111c1d08f6e32/ "oDesk Profile")
-- Email: [mhielscher@wasabiflux.org](mailto:mhielscher@wasabiflux.org "Email")
+- Email: [matt@wasabiflux.org](mailto:matt@wasabiflux.org "Email")
 - Phone: (818) 389-4254
 - Other resume formats: [HTML5][12], [PDF][13], [Markdown source][14], [plaintext][15]
 

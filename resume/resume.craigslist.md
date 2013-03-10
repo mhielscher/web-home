@@ -1,14 +1,15 @@
 Matt Hielscher
 ==============
 
+I am a hacker. I love programming. Specifically, I love anything that makes me think in new ways. I think fully autonomous systems are cool. I wrote my first fully autonomous (simulated) robot at age 10. I taught myself HyperTalk, RoboTalk, Perl, and HTML before I was in high school.
 
+I've professionally developed for the web, and for fun I've done game and internet application development. I'm looking for a Sacramento-local or telecommute part-time job.
 
 - Website: [http://www.wasabiflux.org/](http://www.wasabiflux.org/ "Home")
 - Github: [http://github.com/mhielscher](http://github.com/mhielscher "Github")
 - oDesk: [Profile](https://www.odesk.com/o/profiles/users/_~0183f111c1d08f6e32/ "oDesk Profile")
 - Email: [matt@wasabiflux.org](mailto:matt@wasabiflux.org "Email")
-- Phone: (818) 389-4254
-- Other resume formats: [HTML5][12], [PDF][13], [Markdown source][14], [plaintext][15]
+- Other resume formats: [PDF][12], [Markdown source][13], [plaintext][14]
 
 
 Work Experience
@@ -35,10 +36,10 @@ Work Experience
 Projects
 --------
 
-### [QCOChat][16]
+### [QCOChat][15]
 #### February 2013 -- present
 
-Video conferencing and chat web app using WebRTC. Under development to replace [TinyChat][17] as a hangout for a group of friends.
+Video conferencing and chat web app using WebRTC. Under development to replace [TinyChat][16] as a hangout for a group of friends.
 
 ### [Simplebot][4]
 #### September 2009 -- February 2010  
@@ -83,9 +84,9 @@ College of Engineering
 September 2003 -- March 2009  
 
 
-[1]: http://pictoral.org
-[2]: http://alexanderperls.com
-[3]: http://www.fileyourtaxes.com
+[1]: http://pictoral.org/
+[2]: http://alexanderperls.com/
+[3]: http://www.fileyourtaxes.com/
 [4]: http://github.com/mhielscher/simplebot
 [5]: http://source.bungie.org/
 [6]: http://www.socalcontest.org/
@@ -94,10 +95,9 @@ September 2003 -- March 2009
 [9]: http://bertjohnson.net/archives/puzzlecrack/rp2005/about.asp
 [10]: http://bertjohnson.net/archives/puzzlecrack/rp2006/about.asp
 [11]: http://www.cs.ucsb.edu/
-[12]: http://www.wasabiflux.org/resume/resume.html
-[13]: http://www.wasabiflux.org/resume/resume.pdf
-[14]: http://www.wasabiflux.org/resume/resume.md
-[15]: http://www.wasabiflux.org/resume/resume.txt
-[16]: http://github.com/mhielscher/qcochat
-[17]: http://tinychat.com/
+[12]: http://www.wasabiflux.org/resume/resume.pdf
+[13]: http://www.wasabiflux.org/resume/resume.craigslist.md
+[14]: http://www.wasabiflux.org/resume/resume.txt
+[15]: http://github.com/mhielscher/qcochat
+[16]: http://tinychat.com/
 
