@@ -4,7 +4,7 @@ Website: http://www.wasabiflux.org/
 Github: http://github.com/mhielscher
 Twitter: http://twitter.com/mhielscher
 oDesk: https://www.odesk.com/o/profiles/users/_~0183f111c1d08f6e32/
-Email: mhielscher@gmail.com
+Email: matt@wasabiflux.org
 Phone: (818) 389-4254
 
 
@@ -31,6 +31,11 @@ June 2005 - May 2006
 
 Projects
 --------
+
+QCOChat
+HTML5, JavaScript
+February 2013 - present
+    Video conferencing and chat web app using WebRTC. Under development to replace TinyChat as a hangout for a group of friends.
 
 Simplebot
 Python
@@ -66,7 +71,7 @@ Education and Professional Development
 --------------------------------------
 
 Udacity, http://www.udacity.com/
-3 courses w/ Highest Distinction, 1 course w/ High Distinction
+3 courses w/ Highest Distinction, 1 course w/ High Distinction, 3 courses underway
 February 2012 -- present
 
 University of California, Santa Barbara
