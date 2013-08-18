@@ -33,6 +33,12 @@ article section h1 {
     padding-bottom: .25em;
 }
 
+article section h2 {
+    font: 0.8em "Lucida Console", "Monaco", "Courier New", monospace;;
+    line-height: 1.0em;
+    padding-bottom: .25em;
+}
+
 article p {
     font-size: 1em;
     line-height: 1.3em;

@@ -1,9 +1,12 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteCond %{HTTP_HOST} !^www.wasabiflux.org$ [NC]
-RewriteRule (.*) http://www.wasabiflux.org/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 RewriteRule source/pretty/(.*) source-display.php?file=source/$1 [L]
 RewriteRule ^resume.html resume/resume.html [R=301,L]
+RewriteRule ^profile.html index.html [R=301,L]
+RewriteRule ^electronics/(.*) archived/electronics/$1 [R=301,L]
+RewriteRule ^~fissioninferno/?(.*) http://kittenhugs.me/ [R=301,L]
 </IfModule>
 
