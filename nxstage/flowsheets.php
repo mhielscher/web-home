@@ -51,8 +51,7 @@
                 $("#to-date").datepicker({
                     onSelect: function (endDateText, inst) {
                         startDateText = $("#from-date").val();
-                        data = getFlowsheetData(startDateText, endDateText);
-                        displayFlowsheets(data);
+                        getFlowsheets(startDateText, endDateText);
                     }
                 });
             });
