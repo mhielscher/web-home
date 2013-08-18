@@ -29,9 +29,10 @@ if ($filenames === false) {
 
 $data = array();
 foreach ($filenames as $filename) {
-    $filedate = DateTime::createFromFormat('Y-m-d.json', $filename);
-    if ($filedate <= $endDate && $filedate >= $startDate)
-        $data[] = file_get_contents("data/$filename");
+    $filedate = DateTime::createFromFormat('Y-m-d*', $filename);
+    if ($filedate <= $endDate && $filedate >= $startDate) {
+        $data[] = trim(file_get_contents("data/$filename"));
+    }
 }
 
 $output = '['.implode(',', $data).']';
