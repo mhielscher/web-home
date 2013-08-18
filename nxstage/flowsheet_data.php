@@ -7,8 +7,17 @@ if ($_SERVER['REQUEST_METHOD'] != 'GET') {
     exit();
 }
 
-$startDate = DateTime::createFromFormat('m/d/Y', $_GET['start']);
-$endDate = DateTime:: createFromFormat('m/d/Y', $_GET['end']);
+if (isset($_GET['end']))
+    $endDate = DateTime::createFromFormat('m/d/Y', $_GET['end']);
+else
+    $endDate = new DateTime("now");
+
+if (isset($_GET['start']))
+    $startDate = DateTime::createFromFormat('m/d/Y', $_GET['start']);
+else {
+    $oneWeek = new DateInterval("P14D");
+    $startDate = $endDate->sub($oneWeek);
+}
 
 $filenames = scandir('data');
 if ($filenames === false) {

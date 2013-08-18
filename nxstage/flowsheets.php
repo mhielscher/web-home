@@ -32,10 +32,13 @@
                 var flowsheetHTML = new Array();
                 var idx = -1;
                 for (var date in flowsheets) {
-                    flowsheetHTML[++idx] = '<table class="flowsheet" id="flowsheet-'.date."'>";
-                    
-                    flowsheetHTML[++idx] = '</table>
+                    //flowsheetHTML[++idx] = '<table class="flowsheet" id="flowsheet-'.date."'>";
+                    flowsheetHTML[++idx] = '<pre>';
+                    flowsheetHTML[++idx] = flowsheets[date];
+                    flowsheetHTML[++idx] = '</pre>';
+                    //flowsheetHTML[++idx] = '</table>';
                 }
+                $('#flowsheet-section').html(flowsheetHTML.join(''));
             }
             
             $(document).ready(function () {
