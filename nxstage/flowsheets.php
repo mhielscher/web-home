@@ -34,7 +34,7 @@
                 for (var date in flowsheets) {
                     //flowsheetHTML[++idx] = '<table class="flowsheet" id="flowsheet-'.date."'>";
                     flowsheetHTML[++idx] = '<pre>';
-                    flowsheetHTML[++idx] = flowsheets[date];
+                    flowsheetHTML[++idx] = JSON.stringify(flowsheets[date]);
                     flowsheetHTML[++idx] = '</pre>';
                     //flowsheetHTML[++idx] = '</table>';
                 }
