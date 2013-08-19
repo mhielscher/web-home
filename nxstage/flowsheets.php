@@ -32,7 +32,7 @@
                 var flowsheetHTML = new Array();
                 var idx = -1;
                 for (var date in flowsheets) {
-                    flowsheetHTML[++idx] = '<table class="flowsheet" id="flowsheet-'.date."'>";
+                    flowsheetHTML[++idx] = '<table class="flowsheet" id="flowsheet-'+date+'">';
                     flowsheetHTML[++idx] = '<tr><th>';
                     flowsheetHTML[++idx] = '<td span="10">';
                     flowsheetHTML[++idx] = flowsheets['title'];
@@ -42,7 +42,7 @@
                     flowsheetHTML[++idx] = '</td><td>';
                     flowsheetHTML[++idx] = flowsheets[date]['name'];
                     flowsheetHTML[++idx] = '</td><td>';
-                    flowsheetHTML[++idx] = '<strong>Date:</strong>;
+                    flowsheetHTML[++idx] = '<strong>Date:</strong>';
                     flowsheetHTML[++idx] = flowsheets[date]['date'];
                    	flowsheetHTML[++idx] = '</td></tr>';
                     flowsheetHTML[++idx] = '</table>';

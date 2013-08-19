@@ -32,7 +32,7 @@ foreach ($filenames as $filename) {
 	$filedate = explode('.', $filename);
 	$filedate = $filedate[0];
     $filedate = DateTime::createFromFormat('Y-m-d-D', $filedate);
-    var_dump($filedate);
+    //var_dump($filedate);
     if ($filedate <= $endDate && $filedate >= $startDate) {
         $data[] = trim(file_get_contents("data/$filename"));
     }
