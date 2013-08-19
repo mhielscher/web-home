@@ -29,7 +29,9 @@ if ($filenames === false) {
 
 $data = array();
 foreach ($filenames as $filename) {
-    $filedate = DateTime::createFromFormat('Y-m-d-l*', $filename);
+	$filedate = explode('.', $filename);
+	$filedate = $filedate[0];
+    $filedate = DateTime::createFromFormat('Y-m-d-D', $filedate);
     if ($filedate <= $endDate && $filedate >= $startDate) {
         $data[] = trim(file_get_contents("data/$filename"));
     }
