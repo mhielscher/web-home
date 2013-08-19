@@ -38,9 +38,9 @@
                 var flowsheetHTML = new Array();
                 var idx = -1;
                 for (var date in flowsheets) {
-                    $('#flowsheet-section').append(parseTemplate(flowsheetTemplate, flowsheets[date]));
+                    flowsheetHTML[++idx] = parseTemplate(flowsheetTemplate, flowsheets[date]);
                 }
-                $('#flowsheet-section').html(flowsheetHTML.join(''));
+                $('#flowsheet-section').html(flowsheetHTML.join("\n\n"));
             }
             
             $(document).ready(function () {
