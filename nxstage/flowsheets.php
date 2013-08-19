@@ -31,7 +31,7 @@
             }
             
             var printPattern = /\{\{ ((\w|\d|\.|\[\d\])+) \}\}/gm;
-            var forPattern = /\{% for (\w+) in (\w+) %\}/gm;
+            var forPattern = /\{\% for (\w+) in ((\w|\.)+) \%\}/gm;
             function parseTemplate(template, data) {
                 console.log(printPattern.exec(template));
                 console.log(forPattern.exec(template));
