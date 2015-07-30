@@ -13,6 +13,17 @@
         <script type="text/javascript">
             var flowsheetTemplate;
             
+            function getTemplate() {
+                $.get(
+                    "template.html",
+                    {},
+                    function (data, status) {
+                        flowsheetTemplate = data;
+                    },
+                    "html"
+                );
+            }
+            
             function getFlowsheets(startDate, endDate) {
                 $.get(
                     "flowsheet_data.php",
@@ -20,7 +31,7 @@
                         start: startDate,
                         end: endDate
                     },
-                    function (data, status, jqXHR) {
+                    function (data, status) {
                         if (status == "success")
                             displayFlowsheets(data);
                         else
@@ -30,12 +41,79 @@
                 );
             }
             
+            function parseVariable(variable, data) {
+                var keys = variable.split('.');
+                var dataPiece = data;
+                for (var i=0; i<keys.length; i++) {
+                    dataPiece = dataPiece[keys[i]];
+                    if (dataPiece === undefined) {
+                        dataPiece = "";
+                        break;
+                    }
+                }
+                return datapiece;
+            }
+            
             var printPattern = /\{\{ ((\w|\d|\.|\[\d\])+) \}\}/gm;
             var forPattern = /\{\% for (\w+) in ((\w|\.)+) \%\}/gm;
+            var endforPattern = /\{\% endfor \%\}/gm;
             function parseTemplate(template, data) {
-                console.log(printPattern.exec(template));
-                console.log(forPattern.exec(template));
-                return template;
+                var parsed = template;
+                var forMatches = Array();
+                var endforMatches = Array();
+                var forMatch = forPattern.exec(template);
+                while (forMatch !== null) {
+                    forMatches.push(forMatch);
+                }
+                var endforMatch = endforPattern.exec(template);
+                while (endforMatch !== null) {
+                    endforMatches.push(endforMatch);
+                }
+                if (forMatches.length !== endforMatches.length) {
+                    console.log("Unclosed for loop in template.");
+                    return template;
+                }
+                
+                for (var i=0; i<forMatches.length; i++) {
+                    forMatch = forMatches[i];
+                    endforMatch = endforMatches[i];
+                    console.log(forMatch['index'], endforMatch['index']);
+                    var loopSegment = parsed.slice(forMatch['index']+forMatch[0].length, endforMatch['index']);
+                    console.log(loopSegment);
+                    var loopIterable = parseVariable(forMatch[2], data);
+                    var parsedLoopSegment = loopSegment;
+                    var fullParsedLoop = "";
+                    var loopVar = {}
+                    var loopCount = 0;
+                    var loopPrintMatch = printPattern.exec(loopSegment);
+                    while (loopPrintMatch !== null && loopCount < loopIterable.length) {
+                        loopVar[forMatch[1]] = loopIterable[loopCount];
+                        var dataPiece = parseVariable(loopPrintMatch[1], loopVar);
+                        parsedLoopSegment = parsedLoopSegment.replace(loopPrintMatch[0], dataPiece);
+                        fullParsedLoop += parsedLoopSegment;
+                        loopPrintMatch = printPattern.exec(loopSegment);
+                        loopCount++;
+                        console.log(loopCount);
+                    }
+                    template = template.substr(0, forMatch['index']) + fullParsedLoop + template.substr(endforMatch['index']+endforMatch.length);
+                    var forMatch = forPattern.exec(template);
+                }
+                
+                var printMatch = printPattern.exec(template);
+                while (printMatch !== null) {
+                    var keys = printMatch[1].split('.');
+                    var dataPiece = data;
+                    for (var i=0; i<keys.length; i++) {
+                        dataPiece = dataPiece[keys[i]];
+                        if (dataPiece === undefined) {
+                            dataPiece = "";
+                            break;
+                        }
+                    }
+                    parsed = parsed.replace(printMatch[0], dataPiece);
+                    printMatch = printPattern.exec(template);
+                }
+                return parsed;
             }
             
             function displayFlowsheets(flowsheets) {
@@ -48,8 +126,8 @@
             }
             
             $(document).ready(function () {
-                flowsheetTemplate = $('#flowsheet-section').html();
-                $('#flowsheet-section').html('');
+                getTemplate();
+                //$('#flowsheet-section').html('');
                 $("#from-date").datepicker({
                     onSelect: function (startDateText, inst) {
                         endDateText = $("#to-date").val();
@@ -84,171 +162,7 @@
         </nav>
         <hr>
         <section id="flowsheet-section">
-<table border="0" cellspacing="0" cellpadding="0" class="ta1">
-<colgroup><col width="92"/><col width="90"/><col width="114"/><col width="84"/><col width="80"/><col width="83"/><col width="90"/><col width="79"/><col width="76"/><col width="105"/><col width="123"/><col width="121"/><col width="99"/></colgroup>
-<tr class="ro2">
-<td colspan="11" style="text-align:left;width:0.8252in; " class="ce51"><p>{{ title }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr>
-<tr class="ro3">
-<td style="text-align:left;width:0.8252in; " class="ce52"><p>Name:</p></td>
-<td colspan="2" style="text-align:left;width:0.8146in; " class="ce61"><p>{{ name }}</p></td>
-<td style="text-align:left;width:0.761in; " class="ce67"><p>Date:</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce70"><p>{{ date }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce61"> </td>
-<td style="text-align:left;width:0.8146in; " class="ce67"><p>Time:</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce64"><p>{{ time }}</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce61"> </td>
-<td style="text-align:left;width:0.9429in; " class="ce61"> </td>
-<td style="text-align:left;width:1.1043in; " class="ce69"> </td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro2"><td colspan="2" style="text-align:left;width:0.8252in; " class="ce53"><p>Pre-Treatment Data</p></td>
-<td colspan="2" style="text-align:left;width:1.0291in; " class="ce66"><p>Type of dialysate:</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce62"><p>{{ pre_treatment.dialysate_type }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce62"> </td>
-<td style="text-align:left;width:0.8146in; " class="ce62"> </td>
-<td style="text-align:left;width:0.7075in; " class="ce73"> </td>
-<td colspan="2" style="text-align:left;width:0.6862in; " class="ce74"><p>Cartridge Lot #</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce84"> </td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro4"><td style="text-align:left;width:0.8252in; " class="ce54"><p>Dry Weight</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce54"><p>Today's Weight</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce54"><p>UF Goal (incl. PO/IV)</p></td>
-<td style="text-align:left;width:0.761in; " class="ce54"><p>Dialysate Liters</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce54"><p>Max FF</p></td>
-<td style="text-align:left;width:0.75in; " class="ce54"><p>Standing BP/Pulse</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce54"><p>Sitting BP/Pulse</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce54"><p>Temp</p></td>
-<td colspan="2" style="text-align:left;width:0.6862in; " class="ce75"><p>{{ pre_treatment.cartridge_lot }}</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce85"> </td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="ce91"> </td>
-</tr><tr class="ro5"><td style="text-align:left;width:0.8252in; " class="ce55"><p>{{ pre_treatment.dry_weight }}</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce63"><p>{{ pre_treatment.weight }}</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce63"><p>{{ pre_treatment.UF_goal }}</p></td>
-<td style="text-align:left;width:0.761in; " class="ce63"><p>{{ pre_treatment.dialysate_volume }}</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce63"><p>{{ pre_treatment.max_FF }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce63"><p>{{ pre_treatment.sitting_BP }}</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce63"><p>{{ pre_treatment.standing_BP }}</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce63"><p>{{ pre_treatment.temperature }}</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce76"><p>Drug</p></td>
-<td style="text-align:left;width:0.9429in; " class="ce76"><p>Dose</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce76"><p>Time</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro3"><td colspan="2" style="text-align:left;width:0.8252in; " class="ce56"><p>Change in symptoms:</p></td>
-<td colspan="6" style="text-align:left;width:1.0291in; " class="ce61"><p>{{ pre_treatment.symptoms_change }}</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce77"><p>{{ treatment.medications[0].medication }}:</p></td>
-<td style="text-align:right; width:0.9429in; " class="ce81"><p>{{ treatment.medications[0].dose }}</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce86"><p>{{ treatment.medications[0].time }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro3"><td colspan="2" style="text-align:left;width:0.8252in; " class="ce56"><p>Change in medication:</p></td>
-<td colspan="6" style="text-align:left;width:1.0291in; " class="ce61"><p>{{ pre_treatment.meds_change }}</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce77"><p>{{ treatment.medications[1].medication }}:</p></td>
-<td style="text-align:right; width:0.9429in; " class="ce82"><p>{{ treatment.medications[1].dose }}</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce86"><p>{{ treatment.medications[1].time }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro3"><td style="text-align:left;width:0.8252in; " class="ce56"><p>Access:</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce61"><p>{{ pre_treatment.access_type }}</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce67"><p>Needle Gauge:</p></td>
-<td style="text-align:left;width:0.761in; " class="ce67"><p>Arterial:</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce61"><p>{{ pre_treatment.needle_gauge.arterial }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce67"><p>Venous:</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce61"><p>{{ pre_treatment.needle_gauge.venous }}</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce69"> </td>
-<td style="text-align:left;width:0.6862in; " class="ce77">{{ treatment.medications[2].medication }}:</td>
-<td style="text-align:left;width:0.9429in; " class="ce82">{{ treatment.medications[2].dose }}</td>
-<td style="text-align:left;width:1.1043in; " class="ce86">{{ treatment.medications[2].time }}</td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro3"><td colspan="2" style="text-align:left;width:0.8252in; " class="ce56"><p>Problems with access:</p></td>
-<td colspan="6" style="text-align:left;width:1.0291in; " class="ce61">{{ pre_treatment.access_problems }}</td>
-<td style="text-align:left;width:0.6862in; " class="ce77">{{ treatment.medications[3].medication }}:</td>
-<td style="text-align:left;width:0.9429in; " class="ce81">{{ treatment.medications[3].dose }}</td>
-<td style="text-align:left;width:1.1043in; " class="ce86">{{ treatment.medications[3].time }}</td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro6"><td style="text-align:left;width:0.8252in; " class="ce57"><p>Time</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce57"><p>BP/Pulse</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce57"><p>Dialysate Rate/Vol</p></td>
-<td style="text-align:left;width:0.761in; " class="ce57"><p>UF Rate/Vol</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce57"><p>Blood Flow Rate</p></td>
-<td style="text-align:left;width:0.75in; " class="ce57"><p>Venous Pressure</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce57"><p>Effluent Pressure</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce57"><p>Arterial Pressure</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce57"><p>FF</p></td>
-<td colspan="2" style="text-align:left;width:0.9429in; " class="ce57"><p>Medication or bolus</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="ce92"> </td>
-</tr>
-{% for row in treatment.chart %}
-<tr class="ro7">
-<td style="text-align:left;width:0.8252in; " class="ce58"><p>{{ row.time }}</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce58"><p>{{ row.BP }}</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce58"><p>{{ row.dialysate_rate }} / {{ row.dialysate_volume }}</p></td>
-<td style="text-align:left;width:0.761in; " class="ce58"><p>{{ row.UF_rate }} / {{ row.UF_volume }}</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce58"><p>{{ row.blood_flow_rate }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce58"><p>{{ row.venous_pressure }}</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce58"><p>{{ row.effluent_pressure }}</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce58"><p>{{ row.arterial_pressure }}</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce58"><p>{{ row.FF }}</p></td>
-<td colspan="2" style="text-align:left;width:0.9429in; " class="ce83">{{ row.med_bolus }}</td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr>
-{% endfor %}
-<tr class="ro2">
-<td style="text-align:left;width:0.8252in; " class="ce59"><p>Total TX time:</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce64"><p>{{ treatment.total_time }}</p></td>
-<td colspan="2" style="text-align:left;width:1.0291in; " class="ce56"><p>Total dialysate volume:</p></td>
-<td style="text-align:left;width:0.7181in; " class="ce64"><p>{{ treatment.total_dialysate_volume }}</p></td>
-<td style="text-align:left;width:0.75in; " class="ce56"><p>Total UF:</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce64"><p>{{ treatment.total_UF }}</p></td>
-<td style="text-align:left;width:0.7075in; " class="ce56"><p>BLP:</p></td>
-<td style="text-align:left;width:0.6862in; " class="ce64"><p>{{ treatment.BLP }}</p></td>
-<td style="text-align:left;width:0.9429in; " class="ce56"><p>Total PO/IV:</p></td>
-<td style="text-align:left;width:1.1043in; " class="ce88"><p>{{ treatment.total_PO_IV }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro3"><td colspan="4" style="text-align:left;width:0.8252in; " class="ce56"><p>Post-Treatment Data</p></td>
-<td style="text-align:left;width:0.7181in; " class="Default"> </td>
-<td style="text-align:left;width:0.75in; " class="Default"> </td>
-<td style="text-align:left;width:0.8146in; " class="Default"> </td>
-<td style="text-align:left;width:0.7075in; " class="Default"> </td>
-<td style="text-align:left;width:0.6862in; " class="Default"> </td>
-<td style="text-align:left;width:0.9429in; " class="Default"> </td>
-<td style="text-align:left;width:1.1043in; " class="ce89"> </td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro4"><td style="text-align:left;width:0.8252in; " class="ce57"><p>Sitting BP/Pulse</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce57"><p>Standing BP/Pulse</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce57"><p>Temp</p></td>
-<td style="text-align:left;width:0.761in; " class="ce57"><p>Weight</p></td>
-<td colspan="4" style="text-align:left;width:0.7181in; " class="ce56"><p>Problems/complaints during treatment:</p></td>
-<td colspan="3" style="text-align:left;width:0.6862in; " class="ce78"><p>{{ post_treatment.problems }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro8"><td style="text-align:left;width:0.8252in; " class="ce58"><p>{{ post_treatment.sitting_BP }}</p></td>
-<td style="text-align:left;width:0.8146in; " class="ce58"><p>{{ post_treatment.standing_BP }}</p></td>
-<td style="text-align:left;width:1.0291in; " class="ce58"><p>{{ post_treatment.temperature }}</p></td>
-<td style="text-align:left;width:0.761in; " class="ce58"><p>{{ post_treatment.weight }}</p></td>
-<td colspan="2" style="text-align:left;width:0.7181in; " class="ce71"><p>Dialyzer appearance:</p></td>
-<td colspan="5" style="text-align:left;width:0.8146in; " class="ce72"><p>{{ post_treatment.dialyzer_appearance }}</p></td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr><tr class="ro10"><td style="text-align:left;width:0.8252in; " class="ce60"><p>Comments:</p></td>
-<td colspan="10" style="text-align:left;width:0.8146in; " class="ce65">{{ post_treatment.comments }}</td>
-<td style="text-align:left;width:1.0929in; " class="Default"> </td>
-<td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr></table><table border="0" cellspacing="0" cellpadding="0" class="ta1"><colgroup><col width="99"/></colgroup><tr class="ro9"><td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr></table><table border="0" cellspacing="0" cellpadding="0" class="ta1"><colgroup><col width="99"/></colgroup><tr class="ro9"><td style="text-align:left;width:0.889in; " class="Default"> </td>
-</tr>
-</table>
+        
         </section>
     </body>
 </html>
