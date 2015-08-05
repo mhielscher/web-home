@@ -1,22 +1,32 @@
 Matthew Hielscher
 =================
+Citrus Heights, CA
 
-- Website: [http://www.wasabiflux.org/](http://www.wasabiflux.org/ "Home")
+- Website: [http://wasabiflux.org/](http://wasabiflux.org/ "Home")
 - Github: [http://github.com/mhielscher](http://github.com/mhielscher "Github")
-- Twitter: [http://twitter.com/mhielscher](http://twitter.com/mhielscher "Twitter")
-- oDesk: [Profile](https://www.odesk.com/o/profiles/users/_~0183f111c1d08f6e32/ "oDesk Profile")
+- Upwork: [Profile](https://www.upwork.com/users/~0183f111c1d08f6e32 "Upwork Profile") (formerly oDesk)
 - Email: [matt@wasabiflux.org](mailto:matt@wasabiflux.org "Email")
 - Phone: (818) 389-4254
-- Other resume formats: [HTML5][12], [PDF][13], [Markdown source][14], [plaintext][15]
+- Other resume formats (public): [PDF][13], [Markdown source][14], [plaintext][15]
 
 
 Work Experience
 ---------------
 
-### Freelance Programmer
-#### Self-employed, November 2012 -- present
+### Backend Developer
+#### [California Security Agency][17], April 2013 -- August 2014, present
 
-- Designed and built [Pictoral.org][1] search engine of Facebook Pages, including indexer and crawlers; with Python/Flask, MySQL, gunicorn, and nginx on AWS.
+- Built PHP backend with ORM, authentication, media uploads, account management.
+- Designed REST-like API for AJAX calls.
+- Scripted automatic daily report compilation emailed to clients.
+- Optimized MySQL database schema and SQL statements.
+- Managed CentOS 5 VPS with LAMP stack and one-touch deployment with Fabric.
+
+### Independent Software Developer
+#### Self-employed, multiple clients, November 2012 -- present
+
+- Created "Taskbook" feature for [EVALS][12], a critical component in securing multiple large municipal contracts.
+- Designed and built Pictoral.org search engine of Facebook Pages, including indexer and crawlers; with Python/Flask, MySQL, gunicorn, and nginx on AWS.
 - Wrote batch YouTube search scraper in Python to keep accurate view counts on [AlexanderPerls.com][2].
 - Added parsing for 2002-2004 patent grant XML data and pre-2002 APS data to existing 2005+ parser with XPath and Python.
 
@@ -52,7 +62,7 @@ Simulation of intelligent competitive agents using various AI algorithms and par
 ### EigenMaze  
 #### January 2005 -- March 2005  
 
-3D OpenGL networked game engine in Java. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in a team environment. Totaled over 10,000 lines of code.
+3D OpenGL networked physics/game engine in Java. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in an Agile team environment.
 
 ### [Marathon: Aleph One][5]
 #### March 2000 -- July 2003  
@@ -63,7 +73,7 @@ Implemented the Lua scripting language in the open source game engine Aleph One 
 Distinctions and Activities
 ---------------------------
 
-- Ranked 5th of 49 teams in 2008 [Southern California Regionals][6] of the [ACM International Collegiate Programming Contest][7]. Top 10 in 2004.
+- Ranked 5th of 49 teams in 2008, 10th of 62 in 2004 [Southern California Regionals][6] of the [ACM International Collegiate Programming Contest][7], personally solving optimizaton and *computational geometry* challenges.
 - Organized and administered 2005, 2006, 2008 UCSB ACM Programming Contests.
 - Placed 2nd in [PuzzleCrunch 2006][8], hosted by UIUC. Participated in [Puzzlecrack 2005][9], [2006][10].
 - Only individual to earn the Continential Mathematics National C++ Contest Medal twice for top score in the nation.
@@ -82,9 +92,9 @@ College of Engineering
 September 2003 -- March 2009  
 
 
-[1]: http://pictoral.org
-[2]: http://alexanderperls.com
-[3]: http://www.fileyourtaxes.com
+[1]: http://pictoral.org/
+[2]: http://alexanderperls.com/
+[3]: http://www.fileyourtaxes.com/
 [4]: http://github.com/mhielscher/simplebot
 [5]: http://source.bungie.org/
 [6]: http://www.socalcontest.org/
@@ -93,9 +103,9 @@ September 2003 -- March 2009
 [9]: http://bertjohnson.net/archives/puzzlecrack/rp2005/about.asp
 [10]: http://bertjohnson.net/archives/puzzlecrack/rp2006/about.asp
 [11]: http://www.cs.ucsb.edu/
-[12]: http://www.wasabiflux.org/resume/resume.html
+[12]: http://evals.net/
 [13]: http://www.wasabiflux.org/resume/resume.pdf
-[14]: http://www.wasabiflux.org/resume/resume.md
+[14]: http://www.wasabiflux.org/resume/resume.md?raw=1
 [15]: http://www.wasabiflux.org/resume/resume.txt
 [16]: http://github.com/mhielscher/qcochat
 [17]: http://tinychat.com/
