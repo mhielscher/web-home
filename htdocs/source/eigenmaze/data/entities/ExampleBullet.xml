@@ -1,0 +1,22 @@
+<Entity type="Projectile">
+	<Name>Bullet</Name>
+	<Model>data/models/bullet/bullet.obj</Model>
+	<ModelScale>0.12</ModelScale>
+	<SphereRadius>0.3</SphereRadius>
+	<Mass>5</Mass>
+	<Damage>5</Damage>
+	<Bounces>true</Bounces>
+	<Weathervane>true</Weathervane>
+	<BlastRadius>0</BlastRadius>
+	<Particles type="death">
+		<Size>10</Size>
+		<ColorMin>0.4,0.0,0.0</ColorMin>
+		<ColorMax>0.8,0.2,0.0</ColorMax>
+		<SpeedMin>3</SpeedMin>
+		<SpeedMax>9</SpeedMax>
+		<LifeMin>200</LifeMin>
+		<LifeMax>500</LifeMax>
+		<ScaleMin>0.5</ScaleMin>
+		<ScaleMax>0.75</ScaleMax>
+	</Particles>
+</Entity>

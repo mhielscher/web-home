@@ -1,0 +1,141 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[line]{res} 
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{baskervald} % baskerville substitute (not installed)
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage[demo]{graphicx}
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{23.1pt} % allow room for 2-line header
+\setlength{\headsep}{12pt}  % space between header and text
+\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it M. Hielscher}\\{\it p. \thepage} } % put text in header (right side)
+\cfoot{}                                     % the foot is empty
+\topmargin=-0.8in % start text higher on the page
+\textheight=9.4in
+
+\newenvironment{work_list}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\begin{document}
+	\thispagestyle{empty}{
+	    \fancyhead[L]{\includegraphics[width=1.5cm]{logo.png}}
+    }  
+	\name{\huge{Matthew Hielscher}}
+
+
+	%\address{\makebox[6in][r]{{\bf Local Address:} 1450 Kingswood Dr. Apt. 514\\Roseville, CA 95678}}
+	%\address{\makebox[6in][r]{{\bf Local Address:} {\sl hidden for online resume}}}
+	%\address{{\bf Permanent Address}\\8329 Grenoble St. \#46\\Sunland, CA 91040\\}
+	\address{\makebox[6in][r]{Portfolio, GitHub, and social media at: http://www.wasabiflux.org/}}
+	\address{\makebox[6in][r]{mhielscher@wasabiflux.org\\(818) 389-4254}}
+
+
+	\begin{resume}
+		%\hfill mhielscher@cs.ucsb.edu (818) 389-4254 http://www.cs.ucsb.edu/$\sim$mhielscher/\\
+		%\section{\centerline{}}
+        \vspace{10pt} % provide vertical space between section title and contents
+			%\begin{quote}
+			    %Motivated computer science student with very strong communication and problem-solving skills and a deep understanding of all levels of computer abstraction.
+		    %\end{quote}
+
+\renewcommand\arraystretch{.25} % 1.0 is for standard spacing
+		\vspace{-0.1in} 
+		\section{\centerline{WORK EXPERIENCE}} 
+		\vspace{6pt}
+			\begin{ncolumn}{3}
+			    {\bf Freelance Programmer}&{\sl Self-employed}&\hfill November 2012 -- present\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Designed and built Pictoral.org Facebook search engine, including indexer and crawlers.
+						\item Wrote batch YouTube search scraper to keep accurate view counts on AlexanderPerls.com.
+						\item Added parsing for older XML and APS formats of patent grant data to existing parser script.
+					\end{work_list}}\\ \\ \\
+				{\bf Junior Programmer}&{\sl FileYourTaxes.com}&\hfill June 2005 -- May 2006\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Developed e-filing logic and interface in Perl to match state tax return specifications.
+						%\item Converted state tax return specifications to e-filing logic and interface.
+						\item Built an extension to tax preparation system to allow on-the-fly extraction of compressed archived client data across a distributed network of servers.
+						\item Designed secure network device to function as a firewall and safe fileserver for sensitive data. Implemented redundant security features, automatic proprietary software updates, and web configuration interface.
+						\item Developed web server log analysis tool with PHP and Perl.
+						%% This next item --could-be-- has been shortened, but shouldn't be entirely left out.
+						\item Managed workstations and server running Red Hat Enterprise. Managed NIS with Samba.
+					\end{work_list}}\\ \\ \\
+			\end{ncolumn}
+			
+		\vspace{-0.2in}
+		\section{\centerline{PROJECTS}}
+			\vspace{6pt}
+			
+			%Project Name			Language				date range -- date range
+			%Description of project
+\renewcommand\arraystretch{1.1} % 1.0 is for standard spacing
+			\begin{ncolumn}{3}
+			    {\bf Aggr}&{\sl Django}&\hfill September 2012 -- present\\
+			    \multicolumn{3}{p{6.4in}}{Web application for aggregating, filtering, and reading RSS and Atom feeds. Inspired by the need to track job postings across many sites.}\\ \\
+			    
+				{\bf Simplebot}&{\sl Python}&\hfill September 2009 -- February 2010\\
+				\multicolumn{3}{p{6.4in}}{IRC bot for channel moderation and reference, with access to Google, Wikipedia, and pastebin.com. Runtime loadable command modules, user authentication and access levels, XML configuration.}\\ \\
+				
+				{\bf Robot Arena}&{\sl C++, Java}&\hfill October 2008 -- December 2008\\
+				\multicolumn{3}{p{6.4in}}{Simulation of intelligent competitive agents using various AI algorithms and parameterization improved by genetic algorithms. GUI in Java, backend in C++.}\\ \\
+				
+				{\bf EigenMaze}&{\sl Java}&\hfill January 2005 -- March 2005\\
+				\multicolumn{3}{p{6.4in}}{3D OpenGL networked game engine. Included deathmatch and capture the flag modes. Designed and developed from scratch over 10 weeks in an Agile team environment.}\\ \\
+				
+				{\bf Aleph One}&{\sl C++}&\hfill March 2000 -- July 2003\\
+				\multicolumn{3}{p{6.4in}}{Implemented the {\sl Lua} scripting language in the game engine to allow greater scenario creation control. Added graphical enhancements: more resolutions, fog effect control; and XML configuration options.}\\ \\
+			\end{ncolumn}
+		
+
+		\vspace{-0.2in} 
+		\section{\centerline{DISTINCTIONS AND ACTIVITIES}} 
+			\vspace{12pt}
+
+			%{\bf Distinctions and Activities}
+			\begin{itemize} \itemsep -2pt
+				%\item Member of UCSB ACM chapter.
+				\item Ranked 5th of 49 teams in 2008 Southern California Regionals of the ACM International Collegiate Programming Contest. Top 10 in 2004.
+				\item Organized and administered 2005, 2006, 2008 UCSB ACM Programming Contests.
+				\item Placed 2nd in PuzzleCrunch 2006, hosted by UIUC. Participated in Puzzlecrack 2005, 2006.
+				%\item Only individual to earn the Continential Mathematics National C++ Contest Medal twice for top score in the nation.
+				%\item Received the Rensselaer Polytechnic Institute Mathematics and Science Award in 2003.
+			\end{itemize}
+		
+
+		\vspace{-0.1in}
+		\section{\centerline{EDUCATION}} 
+			\vspace{2pt} 
+			{\sl Various certificates} \hfill 3 courses w/ Highest Distinction, 1 course w/ High Distinction \\
+			Udacity, http://www.udacity.com/ \hfill 2012 -- present \\ \\
+			{\sl Bachelor of Science (inc.)}, Computer Science \hfill 148 of 180 units completed \\
+			University of California, Santa Barbara \hfill 2003 -- 2009
+			% 120 UCSB quarter-units completed
+			% 65.5 transfer units
+			% total 185.5 quarter-units
+			% 104/132 major credits completed (96 UCSB + 8 AP Calc)
+
+
+	\end{resume} 
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+

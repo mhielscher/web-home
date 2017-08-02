@@ -1,0 +1,143 @@
+<style type="text/css">
+
+<!--
+
+	BODY	{ 
+			color: black; 
+			background: white; 
+		}
+
+	P	{
+			font-family: Helvetica,sans-serif;
+		}
+
+	TD, A, UL, LI, H4, H5, H6, BODY 
+		{
+			font-family: Helvetica,sans-serif;
+		}
+	tt	{
+			font-family: Courier;
+		}
+
+	
+	H1 	{	
+			margin-top: 1em;
+			font-size: 160%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+			color: rgb(153, 0, 0);
+			text-align: center;
+			text-transform:uppercase;
+		}
+
+
+	H2 	{
+			font-size: 140%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+
+			color: rgb(0, 0, 153);
+
+			text-align: center;
+		}
+
+
+
+	H3 	{
+			font-size: 120%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+
+			color: rgb(0, 51, 0);
+		}
+
+
+
+	H4 	{
+			font-family: Helvetica, sans-serif;
+		}
+
+
+
+	STRONG, B 
+		{
+			font-weight: bold;
+		}
+
+	
+
+	PRE 	{
+			font-family: Courier, monospace;
+		}
+
+	div.box { 
+			border: solid; border-width: thin; width: 80% 
+		}
+
+	div.color 
+		{
+                	background: rgb(204,204,255);
+                	padding: 0.5em;
+                	border: none;
+              	}
+div.green 
+		{
+                	background: rgb(204,255,204);
+                	padding: 0.5em;
+                	border: none;
+              	}
+div.blue 
+		{
+                	background: rgb(204,204,255);
+                	padding: 0.5em;
+                	border: none;
+              	}
+
+div.red 
+		{
+                	background: rgb(255,204,204);
+                	padding: 0.5em;
+                	border: none;
+              	}
+
+
+	p.footer 
+		{
+			font-size: 80%;
+            border-left: none;
+            border-right: none;
+            border-top: solid;
+			border-top-width: thin;
+            border-color: rgb(51,51,96);
+            border-bottom: solid;
+			border-bottom-width: thin;
+            	}
+	a.nounderline
+		{
+			text-decoration: none;
+		}
+	div.footer
+		{
+            border-left: none;
+            border-right: none;
+            border-top: solid;
+			border-top-width: thin;
+            border-color: rgb(0,0,203);
+            border-bottom: solid;
+			border-bottom-width: thin;
+			border-color: rgb(0,0,203);
+		}
+	div.site
+		{
+			margin-left: 1em; 
+			margin-right: 1em;
+		}
+
+	a:hover { color: rgb(203, 0, 0) } /* when mouse is over link */
+	a:active { color: rgb(203, 0, 0) }
+-->
+
+</style>
+
+
+

@@ -1,0 +1,36 @@
+<set FoulWords="ass bitch fuck shit asshole twat queef lemonparty cock cocksucker <censored>">
+<set Maintainer="restorer">
+<set NickTracking="1">
+
+<user nick="restorer" sex="m" alias="WasabiFlux* restorer*">
+<user nick="szechwan" sex="m">
+<user nick="MaryCPlus" sex="f">
+<user nick="midnight_speed" sex="f">
+<user nick="Tagrath" sex="m">
+<user nick="twitchy_hug" sex="m">
+<user nick="AlandraD" sex="f">
+<user nick="vexelle" sex="f">
+<user nick="nerdia314" sex="f">
+<user nick="dancing_robot" sex="f">
+<user nick="h_monkey" sex="m">
+
+#trolls and common words
+<user nick="where" ignore="y">
+<user nick="what" ignore="y">
+<user nick="the" ignore="y">
+<user nick="his" ignore="y">
+<user nick="who" ignore="y">
+<user nick="is" ignore="y">
+<user nick="me" ignore="y">
+<user nick="a" ignore="y">
+<user nick="any1" ignore="y">
+<user nick="peer" ignore="y">
+<user nick="I" ignore="y">
+
+<channel="#qc-show">
+ LogFile = "log/#qc-show.log"
+ Format = "irssi"
+ Network = "Ustream"
+ OutputFile = "stats/qc-show.html"
+</channel>
+

@@ -1,0 +1,30 @@
+article h1 {
+    font: 2em "Cabin Condensed", Oxygen, Arial, sans-serif;
+    line-height: 2em;
+    padding-bottom: .5em;
+}
+
+article h2 {
+    font: 1.5em "Cabin Condensed", Oxygen, Arial, sans-serif;
+    line-height: 1.5em;
+    padding-bottom: .25em;
+}
+
+article dl {
+    margin-left: 1em;
+    padding-bottom: .25em;
+}
+
+article dt a {
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+article dd {
+    font-size: 1em;
+    line-height: 1.3em;
+    padding-bottom: 1em;
+    padding-left: .5em;
+    color: #1f1f1f;
+}
+

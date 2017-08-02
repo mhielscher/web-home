@@ -1,0 +1,89 @@
+<style type="text/css">
+<!--
+	BODY	{ 
+			color: black; 
+			background: white; 
+			margin-left: 10%; 
+			margin-right: 10%; 
+			font-family: Verdana,Helvetica,sans-serif;
+		}
+
+	P	{
+			font-family: Helvetica,sans-serif;
+			text-indent: 2em;
+		}
+
+	TD, A, UL, LI, H4, H5, H6 
+		{
+			font-family: Helvetica,sans-serif;
+		}
+	
+	H1 	{	
+			font-size: 160%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+			color: rgb(153, 0, 0);
+			text-align: center;
+			text-transform:uppercase;
+		}
+
+	H2 	{
+			font-size: 140%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+			color: rgb(0, 0, 153);
+			text-align: center;
+		}
+
+	H3 	{
+			font-size: 120%;
+			font-weight: normal;
+			font-family: Helvetica, sans-serif;
+			color: rgb(0, 102, 0);
+			margin-left: -8%;
+		}
+
+	H4 	{
+			font-family: Helvetica, sans-serif;
+			font-weight: demi-bold;
+			margin-left: -8%;
+		}
+
+	STRONG, B 
+		{
+			font-weight: bold;
+		}
+	
+	PRE 	{
+			font-family: Courier, monospace;
+		}
+
+	div.box { 
+			border: solid; border-width: thin; width: 80% 
+		}
+
+	div.color {
+                	background: rgb(204,204,255);
+                	padding: 0.5em;
+                	border: none;
+              }
+
+	p.footer 
+		{
+			font-size: 80%;
+              		padding-left: 0.2em;
+              		border-left: none;
+              		border-right: none;
+              		border-top: solid;
+              		border-bottom: none;
+             		border-top-width: thin;
+             		border-color: red;
+            	}
+
+ 	/* :link { color: rgb(0, 0, 153) }   for unvisited links */
+        /*    :visited { color: rgb(153, 0, 153) }  for visited links */
+            :active { color: rgb(255, 0, 102) } /* when link is clicked */
+            :hover { color: rgb(0, 96, 255) } /* when mouse is over link */
+-->
+</style>
+
