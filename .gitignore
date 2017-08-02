@@ -1,0 +1,18 @@
+*.log
+*.sql
+*.sqlite
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+
+/deploy.*
