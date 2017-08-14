@@ -82,7 +82,7 @@ aside.sidebar nav ul.socialnav {
         position: absolute;
         left: 200px;
         /* top right bottom left (clockwise from top) */
-        padding: 0 80px 50px 80px;
+        padding: 0 20px 50px 80px;
     }
 
     aside.sidebar {
@@ -100,11 +100,12 @@ aside.sidebar nav ul.socialnav {
 
     aside.sidebar h1 {
         display: block;
-        font: 2em "Open Sans", Helvetica, sans-serif;
+        font: 42px "Open Sans", Helvetica, sans-serif;
         font-weight: 600;
         line-height: 1em;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-align: right;
+        margin-top: 0.33em;
     }
 
     aside.sidebar nav ul.sitenav {
@@ -128,6 +129,7 @@ aside.sidebar nav ul.socialnav {
 {
     .content {
         left: 240px;
+        padding-right: 80px;
     }
     
     aside.sidebar {
