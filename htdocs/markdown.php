@@ -25,7 +25,7 @@ $html = Markdown::defaultTransform($text);
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PHP Markdown Lib - Readme</title>
+        <title><?php echo basename($path);?> - Rendered Markdown</title>
     </head>
     <body>
                 <?php
