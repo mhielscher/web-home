@@ -1,0 +1,34 @@
+<bot>
+	<module name="pastebin">
+		<subdomain>cooking</subdomain>
+	</module>
+	<module name="admin" />
+	<module name="seen" />
+	<module name="search" />
+	<module name="echo" />
+	<module name="lasturl" />
+	<module name="wikipedia" />
+	<module name="memo" />
+	<server address="irc.freenode.net" port="6667">
+		<nick>
+			transir
+		</nick>
+		<channel name="##cooking">
+			<log status="on" file="##cooking.log" />
+			<flag>topicprotect</flag>
+		</channel>
+		<user>
+			<primarynick>restorer</primarynick>
+			<allowednick>restorer_</allowednick>
+			<allowednick>WasabiFlux</allowednick>
+			<hostmask>about/cooking/nakedchef/chili/restorer</hostmask>
+			<accesslevel>15</accesslevel>
+			<flag>swearexempt</flag>
+			<flag>banprotect</flag>
+			<flag>restrictident</flag>
+			<passwdhash>
+				6c3de0fc3a03d1aa892c31cef6605c08c1d7f08fe81c1372212a2910671ef781
+			</passwdhash>
+		</user>
+	</server>
+</bot>

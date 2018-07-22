@@ -1,0 +1,138 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[line]{res} 
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{newcent}   % uses new century schoolbook postscript font 
+%\usepackage{baskervald} % baskerville substitute (not installed)
+\newsectionwidth{0pt}  % So the text is not indented under section headings
+\usepackage[demo]{graphicx}
+\usepackage{fancyhdr}  % use this package to get a 2 line header
+\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
+\setlength{\headheight}{23.1pt} % allow room for 2-line header
+\setlength{\headsep}{12pt}  % space between header and text
+\pagestyle{fancy}     % set pagestyle for document
+\rhead{ {\it M. Hielscher}\\{\it p. \thepage} } % put text in header (right side)
+\cfoot{}                                     % the foot is empty
+\topmargin=-0.8in % start text higher on the page
+\textheight=9.4in
+
+\newenvironment{work_list}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\begin{document}
+	\thispagestyle{empty}{
+	    \fancyhead[L]{\includegraphics[width=1.5cm]{logo.png}}
+    }  
+	\name{\huge{Matt Hielscher}}
+
+
+	%\address{\makebox[6in][r]{{\bf Local Address:} 1450 Kingswood Dr. Apt. 514\\Roseville, CA 95678}}
+	%\address{\makebox[6in][r]{{\bf Local Address:} {\sl hidden for online resume}}}
+	%\address{{\bf Permanent Address}\\8329 Grenoble St. \#46\\Sunland, CA 91040\\}
+	\address{\makebox[6in][r]{Portfolio, projects, and social media at: https://wasabiflux.org/}}
+	\address{\makebox[6in][r]{matt@wasabiflux.org}}
+
+
+	\begin{resume}
+		%\hfill mhielscher@cs.ucsb.edu (818) 389-4254 http://www.cs.ucsb.edu/$\sim$mhielscher/\\
+		%\section{\centerline{}}
+        \vspace{10pt} % provide vertical space between section title and contents
+			%\begin{quote}
+			    %Motivated computer science student with very strong communication and problem-solving skills and a deep understanding of all levels of computer abstraction.
+		    %\end{quote}
+
+\renewcommand\arraystretch{.25} % 1.0 is for standard spacing
+		\vspace{-0.1in} 
+		\section{\centerline{WORK EXPERIENCE}} 
+		\vspace{6pt}
+			\begin{ncolumn}{3}
+			    {\bf Independent Software}&{\sl Self-Employed}&\hfill November 2012 -- present\\
+			    {\bf Developer}\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Created "Taskbook" feature for EVALS, a critical component in securing multiple large municipal contracts.
+						\item Designed and built Pictoral.org Facebook search engine, including indexer and crawlers.
+						\item Wrote batch YouTube search scraper to keep accurate view counts on AlexanderPerls.com.
+					\end{work_list}}\\ \\ \\
+				{\bf Engineer}&{\sl Stone Cobra}&\hfill August 2015 -- October 2015\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Worked with client to create VPN tunnel between their Cisco router and our Juniper router.
+						\item Implemented session-persistent load balancer with nginx for HTTPS connections on that VPN.
+						\item Backed consultants to asymmetrically insert a Cisco ASA router for compatibility.
+					\end{work_list}}\\ \\ \\
+				{\bf Backend Developer}&{\sl California Security Agency}&\hfill April 2013 -- August 2014\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Built PHP backend with ORM, authentication, media uploads, account management.
+						\item Designed RESTful API for AJAX calls.
+						\item Scripted automatic daily report compilation emailed to clients.
+						\item Optimized MySQL database schema and SQL statements.
+						\item Managed CentOS 5 VPS with LAMP stack and one-touch deployment with Fabric.
+					\end{work_list}}\\ \\ \\
+				{\bf Junior Programmer}&{\sl FileYourTaxes.com}&\hfill June 2005 -- May 2006\\
+				\multicolumn{3}{p{6.4in}}{
+					\begin{work_list}
+						\item Developed e-filing logic and interface in Perl to match state tax return specifications.
+						%\item Converted state tax return specifications to e-filing logic and interface.
+						\item Built an extension to tax preparation system to allow on-the-fly extraction of compressed archived client data across a distributed network of servers.
+						\item Designed secure network device to function as a firewall and safe fileserver for sensitive data. Implemented redundant security features, automatic proprietary software updates, and web configuration interface.
+						\item Developed web server log analysis tool with PHP.
+					\end{work_list}}\\ \\ \\
+			\end{ncolumn}
+			
+		\vspace{-0.1in}
+		\section{\centerline{SELECTED PROJECTS}}
+			\vspace{6pt}
+			
+			%Project Name			Language				date range -- date range
+			%Description of project
+\renewcommand\arraystretch{1.1} % 1.0 is for standard spacing
+			\begin{ncolumn}{3}
+				{\bf Simulist}&{\sl Python}&\hfill July 2015 -- present\\
+			    \multicolumn{3}{p{6.4in}}{Monte Carlo waiting list simulation for estimating chances of receiving a kidney transplant in any year. Based on center-specific annual statistics from the Scientific Registry of Transplant Recipients.}\\ \\
+
+			    {\bf Aggr}&{\sl Django}&\hfill September 2012\\
+			    \multicolumn{3}{p{6.4in}}{Web application for aggregating, filtering, and reading RSS and Atom feeds. Inspired by the need to filter and track job postings across many sites.}\\ \\
+			    
+				{\bf Simplebot}&{\sl Python}&\hfill September 2009 -- February 2010\\
+				\multicolumn{3}{p{6.4in}}{IRC bot for channel moderation and reference, with access to Google, Wikipedia, and pastebin.com. Runtime loadable command modules, user authentication and access levels, XML configuration.}\\ \\
+				
+				{\bf Robot Arena}&{\sl C++, Java}&\hfill October 2008 -- December 2008\\
+				\multicolumn{3}{p{6.4in}}{Simulation of intelligent competitive agents using various AI algorithms and parameterization improved by genetic algorithms. GUI in Java, backend in C++.}\\
+
+				\multicolumn{3}{p{6.4in}}{\centerline{\bf See more of my projects on my website and GitHub.}}\\ \\
+			\end{ncolumn}
+		
+
+		\vspace{-0.2in}
+		\section{\centerline{EDUCATION}} 
+			\vspace{2pt} 
+			{\sl Bachelor of Science (inc.)}, Computer Science \hfill 148 of 180 units completed \\
+			University of California, Santa Barbara \hfill 2003 -- 2009
+			% 120 UCSB quarter-units completed
+			% 65.5 transfer units
+			% total 185.5 quarter-units
+			% 104/132 major credits completed (96 UCSB + 8 AP Calc)
+
+
+	\end{resume} 
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+

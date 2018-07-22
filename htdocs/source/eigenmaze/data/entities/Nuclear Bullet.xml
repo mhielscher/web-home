@@ -1,0 +1,22 @@
+<Entity type="Projectile">
+	<Name>NukeBullet</Name>
+	<Model>data/models/bomb/bomb.obj</Model>
+	<ModelScale>0.15</ModelScale>
+	<SphereRadius>0.35</SphereRadius>
+	<Mass>20</Mass>
+	<Damage>18</Damage>
+	<Bounces>true</Bounces>
+	<Weathervane>true</Weathervane>
+	<BlastRadius>4</BlastRadius>
+	<Particles type="death">
+		<Size>50</Size>
+		<ColorMin>0.4,0.0,0.0</ColorMin>
+		<ColorMax>0.8,0.7,0.0</ColorMax>
+		<SpeedMin>5</SpeedMin>
+		<SpeedMax>40</SpeedMax>
+		<LifeMin>100</LifeMin>
+		<LifeMax>1000</LifeMax>
+		<ScaleMin>0.4</ScaleMin>
+		<ScaleMax>0.75</ScaleMax>
+	</Particles>
+</Entity>

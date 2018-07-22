@@ -1,0 +1,80 @@
+<bot>
+	<module name="pastebin">
+		<subdomain>qc-show</subdomain>
+	</module>
+	<module name="admin" />
+	<module name="seen" />
+	<module name="search" />
+	<module name="echo" />
+	<module name="lasturl" />
+	<module name="wikipedia" />
+	<module name="memo" />
+	<module name="log">
+		<logdirectory>log/</logdirectory>
+	</module>
+	<module name="pisg">
+		<configfile>./config/ustream.pisg.conf</configfile>
+	</module>
+	<module name="dodgefilter" />
+	<server address="c.ustream.tv" port="6667" pass="ointment">
+		<nick>
+			rerotser
+		</nick>
+		<quiet status="on" />
+		<channel name="#qc-show">
+			<log status="on" file="#qc-show.log" />
+			<flag>topicprotect</flag>
+		</channel>
+		<channel name="#qcqcqc" />
+		<user>
+			<primarynick>restorer</primarynick>
+			<allowednick>restorer_</allowednick>
+			<allowednick>WasabiFlux</allowednick>
+			<hostmask>about/cooking/nakedchef/chili/restorer</hostmask>
+			<accesslevel>15</accesslevel>
+			<flag>swearexempt</flag>
+			<flag>banprotect</flag>
+			<flag>restrictident</flag>
+			<passwdhash>
+				6c3de0fc3a03d1aa892c31cef6605c08c1d7f08fe81c1372212a2910671ef781
+			</passwdhash>
+		</user>
+		<user>
+			<primarynick>MaryCPlus</primarynick>
+			<accesslevel>1</accesslevel>
+			<passwdhash>
+				5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+			</passwdhash>
+		</user>
+		<user>
+			<primarynick>midnight_speed</primarynick>
+			<accesslevel>1</accesslevel>
+			<passwdhash>
+				5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+			</passwdhash>
+		</user>
+		<user>
+			<primarynick>Tagrath</primarynick>
+			<accesslevel>1</accesslevel>
+			<passwdhash>
+				5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+			</passwdhash>
+		</user>
+		<user>
+			<primarynick>szechwean</primarynick>
+			<accesslevel>1</accesslevel>
+			<passwdhash>
+				5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+			</passwdhash>
+		</user>
+		<user>
+			<primarynick>twitchy_hug</primarynick>
+			<accesslevel>1</accesslevel>
+			<passwdhash>
+				5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+			</passwdhash>
+		</user>
+		
+		
+	</server>
+</bot>

@@ -1,0 +1,183 @@
+<HTML>  
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Mac">
+  <TITLE>Matt's Coilgun Center - Theory</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><TABLE WIDTH="100%" BORDER="0" CELLSPACING="2" CELLPADDING="0"
+HEIGHT="92">
+  <TR>
+    <TD WIDTH="100%" HEIGHT="16">
+      <P><CENTER><IMG SRC="title.jpg" WIDTH="360" HEIGHT="170" ALIGN="BOTTOM"
+      BORDER="0" NATURALSIZEFLAG="3"></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="100%" HEIGHT="51">
+      <P><CENTER><TABLE WIDTH="99%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT><A HREF="index.html">Home</A></TD> 
+          <TD WIDTH="160">
+            <P><CENTER>Theory</CENTER></TD>
+          <TD WIDTH="39%"><A HREF="links.html">Links</A></TD> 
+        </TR>
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT><A HREF="homescale.html">Home-Scale Coilgun</A></TD> 
+          <TD WIDTH="160">
+            <P><CENTER><A HREF="pictures.html">Picture Gallery</A></CENTER></TD>
+          <TD WIDTH="39%"><A HREF="handheld.html">Handheld Coilgun</A></TD> 
+        </TR>
+      </TABLE></CENTER></TD>
+  </TR>
+  <TR>
+    <TD HEIGHT="16">
+      <H2><CENTER>Theory<HR></CENTER></H2>
+	  
+	  <H3>Ideas</H3>
+
+      <P>If you would like to learn the basics of how a coilgun works, try
+      <A HREF="http://www.oz.net/~coilgun/home.htm">Barry's Coilgun
+      Design Site</A>.
+	  <p>
+	  <FONT COLOR="#990000">Monday, April 26, 2004</FONT><br>
+	  I realized recently that I have a Windows PC now, so I went ahead
+	  and downloaded FEMM. I played around with it a little, modelling
+	  my coilgun, and the values were coming out as I expected; about as
+	  my simulator applet predicted. I modelled the coil-on-projectile
+	  idea, but in order to fit in the tube, the wire gauge would have to
+	  be so low that the
+	  field would be too small to be worth it. The force FEMM calculated
+	  was way below a normal coilgun's force, even with a huge mass of
+	  iron. I haven't written any Lua scripts yet, but I think soon I
+	  will write a complete simulator script to use FEMM to do what my
+	  simulator does now, but more accurately <b>and</b> taking into
+	  account the change in inductance (or at least flux and velocity)
+	  as the projectile moves into the coil.
+	  <p>
+	  <FONT COLOR="#990000">Sunday, April 21, 2004</FONT><br>
+	  In my last update, I was thinking about reversing the roles
+	  of the coil and the projectile. Shortly after writing that,
+	  I tried to try it; I never actually got to try it because the
+	  make-shift mini-coil I wrapped around one of my normal nail
+	  projectiles wouldn't fit into the barrel.
+	  <p>
+	  A few days ago that got me thinking about the relation of mass to 
+	  efficiency. I plugged some numbers into Barry's inductance applet
+	  and into my own simulator, trying different projectile diameters
+	  for constant coil inductance while keeping the coil closely coupled
+	  to the projectile. It turns out that for my coilgun, I could jump
+	  from my current 0.3% efficiency to possibly 3.7% efficiency if I
+	  would use a projectile with diameter 15mm. I could get a 2.8%
+	  efficiency if I used a more standard 9mm projectile, 28mm long
+	  (with a matching coil). Of course, the velocity is smaller, but the
+	  mass makes up for it in kinetic energy. There is an optimum diameter,
+	  though: a coil of constant inductance can't have too large an inner
+	  diameter, or it will lose magnetic influence (field) on the projectile.
+	  A large 40mm shell will have the same kinetic energy as my 2mm nails.
+	  <p>
+	  My quest now is to find a good source of small caliber solid iron or
+	  steel slugs, and matching barrels. After that, I'll check out
+	  stabilization with elliptical coils, because rifling barrels is too
+	  much work for this project.
+	  <p>
+	  <FONT COLOR="#990000">Wednesday, December 18, 2002</FONT><br>
+	  <i>From the news page...</i><br>
+	  My coilgun is in storage for the moment, but I've been thinking
+	  about it and I have a great new idea that I may try much later:
+	  the force on the projectile is directly proportional to the amount
+	  of iron in it, and because it's all iron, that means the mass. So
+	  as the mass increases, so does the force. However, acceleration is
+	  directly proportional to the force and inversely proportional to
+	  the mass, so this "decrease" exactly balances out the increase
+	  caused by mass. Now, if we make the coil the projectile, and
+	  surround the center of the barrel with an iron mass, then we're
+	  dealing with two masses: the one that increases the force can be
+	  varied and very large, while the mass of the projectile, which
+	  decreases the acceleration, can remain the same.
+	  
+	  Explanations of all the math involved are available for each applet.
+
+      <H3>Pulse Width and Shape</H3>
+
+      <P>After learning Java, the first applet I created was this one.
+      It inputs data from your coilgun and graphs the current flowing
+      through the inductor. I've refashioned it with new formulas and
+      cleaned up the interface since then, and it's still a work in
+      progress.</P>
+
+      <P><A HREF="rlccalc.html">RLC Calculator</A><BR CLEAR="ALL"><A
+      HREF="JavaClasses/RLCCalc/Calculator.java">RLC Source Code</A><BR
+      CLEAR="ALL"><A HREF="http://home.san.rr.com/nessengr/techdata/rlc/rlc.html">NET
+      - Formulas Used for RLC</A></P>
+
+      <P>I plan to continue development; implementing the &quot;Transistor
+      Switch&quot; option, improving the graph accuracy and speed with
+      a Runge-Kutta or similar model, and providing extra exact data,
+      such as the time the peak current occured and the time of zero
+      crossing (all currently calculable at the <A HREF="http://web2.airmail.net/jd4usa/">MGC</A>).</P>
+
+      <H3>HAPES</H3>
+
+      <P>The High Amperage Procedure Evaluation System is really just
+      a useful multi-directional formula calculator. The segment titled
+      &quot;Energy in a Capacitor&quot; can calculate the energy stored
+      in a given capacitor, or reverse the equation and calculate the
+      capacitance or voltage you need to acheive a certain energy level.<BR>
+      The &quot;Projectile Speed&quot; segment can calculate the speed
+      of a projectile given either experimental distance results or
+      the mass of a projectile and its kinetic energy. Like the above
+      section, it can also calculate any of the other values, but only
+      if a logical combination of other fields are filled in. For example,
+      it will only calculate firing range (distance) if it is given
+      a height, and a speed (or mass and energy, which can be used
+      to calculate speed). Experiment, and find out what works.<BR>
+      The &quot;Discharge Rate&quot; segment calculates the approximate
+      time in seconds it would take to drain a capacitor through a
+      bleeder resistor. Note that this is very approximate, and should
+      not be used to calculate high-current pulse times. Use the above
+      RLC Applet for that.</P>
+
+      <P><A HREF="hapescalc.html">HAPES Calculator</A><BR CLEAR="ALL"><A
+      HREF="JavaClasses/HAPES/Calculator.java">HAPES Source Code<BR
+      CLEAR="ALL"></A><A HREF="hapesmath.html">HAPES Formulas</A></P>
+
+      <H3>Kinetica</H3>
+
+      <P>Kinetica is a simple applet to show you how far a theoretical
+      projectile (no air resistance) can travel after being fired at
+      any height, velocity, and angle. Simply input velocity, initial
+      height, and firing angle in metric or standard units, and hit
+      &quot;Calculate&quot;. It can also graph a relation of time to
+      projectile height on the same axis (overlay).</P>
+
+      <P><A HREF="kinetica.html">Kinetica Applet</A><BR CLEAR="ALL"><A
+      HREF="JavaClasses/Kinetica/Kinetic.java">Kinetica Source Code<BR
+      CLEAR="ALL"></A><A HREF="kineticamath.html">Math - Gravitational
+      Acceleration</A></P>
+
+      <H3>Electromagnetic Force Simulator</H3>
+
+      <P>The EMF Simulator is the crown jewel of my applet collection
+      and represents many weeks of research and obsession. Input several
+	  bits of information describing your coilgun and hit the calculate
+	  button, and it will show you an RLC graph identical to the above
+	  RLC Calculator, and a graph of the velocity of your projectile with
+	  respect to time. Very useful for determining the optimum factors of
+	  coilgunning, such as projectile and coil length, voltage, projectile
+	  mass, and capacitance, among other things.</P>
+
+      <P><A HREF="emfsim.html">EMF Simulator Applet</A><BR CLEAR="ALL"><A
+      HREF="JavaClasses/EMFSim/CoilgunSimulator.java">EMF Simulator Source
+      Code</A><FONT COLOR="#ff0000"> <B>Rescued and available!</B></FONT><BR
+      CLEAR="ALL"><A HREF="emfmath.html">Magnetic Force Equations</A>
+    </TD>
+  </TR>
+</TABLE></P>
+
+<P><CENTER>Maintained by <A HREF="mailto:restorer@pacificnet.net">Matthew
+Hielscher</A><BR CLEAR="ALL">Last updated: 4/21/04</CENTER>
+
+</BODY>
+</HTML>

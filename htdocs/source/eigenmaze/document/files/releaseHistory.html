@@ -1,0 +1,870 @@
+<html>
+<head>
+ 
+  <title>Release History</title><link rel="stylesheet" href="site.css" type="text/css"></head>
+
+<body>
+<h1>Release History<br>
+</h1><p>
+<h2>Iteration 3 - 3-15-05</h2>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 11<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user sees a shadow under his ship.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Stories 1 and 2 have been fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>A shadow is successfully drawn.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user's video card does not support stencil buffers.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>EigenMaze is launched and shadows are enabled.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>Stencil buffer shadow volumes are used to create realistic shadows for Entities.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 12<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>Visible thrust is shown when the user is accelerating or deacclerating.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 3 has been fulfilled.<br>
+      </p> 
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Visible thrust is drawn that gives the user a indication of what direction the ship is currently going, and what direction it is accelerating towards.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>No fail end condition has been identified.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user accomplishes a task described by User Story 3</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>Visible thrust is a useful indicator that helps the user figure out the ship's velocity and interia in a spacelike enviroment in EigenMaze.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 13<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user sees shadows that are created by the static geometry in the game (if Lightmaps are enabled).<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 1 and 2 have been fulfilled.<br>
+      </p> 
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Shadows created by the walls are successfully created and drawn. <br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Possible failure end condition is the JVM running out of memory because creating lightmaps are both a processor and memory intensive task.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user accomplishes User Story 2.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>Lightmaps are used to create shadows casted by level geometry. This method precalculates the shadows before the game starts to increase performance during actual play time.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 14<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user can see network activity.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Stories 5 or 6 have been fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User can see activity on the network from other users<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user does not see activity on the network from other users<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Other users interacting with the network.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>Game specific data is synched on the network allowing multiple users to participate in the same game.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 15<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>
+      The user sees text messages in the upper left hand corner of the game window.<br></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Stories 1 and 2 have been fulfilled<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Periodic messages appear in the upper left hand of screen. Old messages scroll up until off the screen.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>No messages are seen, or are in the wrong position.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Preconditions</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>The Text display is created with the same method as the Shields and FPS display.  The use of this new feature will be to provide more information to the user.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 16<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>
+      The user sees scenery outside the maze.<br></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 1 has been fulfilled<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The maze appears to be in the middle of a scene.  Currently a mountain range with green plant life around.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The maze is surrounded by blackness.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>Preconditions</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>The Sky box is created by enclosing the game space in a cube that moves with the camera.  unique textures are used for each side to create the effect of a continous scene.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 17<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>
+      The user sets engine-wide preferences.<br></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The engine is up and running.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user can set preferences that will take effect the next time the game is loaded, and are written to persistent storage in an XML format.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The preferences pane does not appear and preferences cannot be changed - possibly due to read-only access to the preferences file.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user chooses "Preferences" from the main menu.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>A new window is created that allows the user to change various engine-wide values. These include windowed resolution, default maze dimensions, and fullscreen mode.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 18<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>
+      A title screen/menu appears while the maze is being generated.<br></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program has started and OpenGL has initialized.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>An OpenGL-powered title screen with clickable menu appears before the game is playable. The user will be able to enter the game once the maze has been fully generated. The user will also be able to choose to set preferences or quit the program.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>No failure condition is identified.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user starts the program.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+     <p>An OpenGL canvas is created to specifically handle the drawing and event-handling of the title menu.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<h2>Iteration 2 - 2-17-05</h2>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 4<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user creates a new maze.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program is running and the game world has been created.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>A new random maze is generated and applied to the game world.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The new maze is not created and the existing maze persists.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user selects "New Maze" from the main menu.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>A new Maze3d with the parameters specified by the user is allocated and generated. The current
+	  list of triangles is erased from the Octree and this maze's triangles are inserted.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 5<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user starts a new network game as server.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program is running, the game world has been created, and the computer has a network or
+	  internet connection.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>A port is opened and the program begins serving a net game on that port (4224 by default).<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The server does not start and clients cannot connect.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user selects "Create a Net Game" from the main menu.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>A new Server object is created which handles network interaction on its own thread.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 6<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user joins a network game.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program is running, the game world has been created, and the computer has a network or
+	  internet connection.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program will connect remotely to a given IP and port, and begin to send and receive data
+	  to participate in a network game.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program throws a ConnectException with the message "Connection refused" or "Connection timed
+	  out".<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user selects "Join a Net Game" from the main menu.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>The EigenEngine's existing NetHandler is told to connect to the user-given IP and port.
+	  The NetHandler begins its own thread to handle async I/O.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 7<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user quits or exits the program.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program is running and the user interface has been created.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program will exit without error.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program will exit with an error; the OS is left to handle that.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user:
+	  <ul>
+	  <li>Closes the main game window.
+	  <li>Selects "Quit" from the main menu.
+	  </ul></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>All user threads are closed properly, loops are exited, and the program closes down.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 8<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user looks at the screen before interacting with the program.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 1 is fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window renders a fully textured three-dimensional maze and a textured player ovject.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window does not display the maze or player object, or fails to correctly render textures.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program has been started.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>Each triangle that makes up the maze is drawn to the GLCanvas. Each triangle that makes
+	  up the player is drawn. All triangles have textures.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 9<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user looks at the screen before interacting with the program.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 1 is fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window renders a complex textured model as a player object representation.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window does not display the player object.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program has been started.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>A Wavefront OBJ model file, its associated material library, and all associated texture image files
+	  are loaded from persistent storage. The triangles of the player object are sorted by texture for
+	  efficiency. Each triangle is drawn, textured, and lit.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 10<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user uses the weapon keys to interact with the game world.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Stories 1 and 2 have been fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>A projectile (bullet or bomb) is launched from the player object.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>No failure mode has been identified.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user presses the weapon keys to launch a specific projectile - spacebar to fire a bullet,
+	  Z to fire a bomb.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>If the user presses the spacebar, a fast-moving Bullet is generated in front of the player object.
+	  The bullet will bounce off walls but explode and do damage on contact with a Ship. If the user presses
+	  the Z button, a Bomb is generated in front of the player object. The Bomb moves slowly and does a
+	  lot of damage, but explodes on any collision.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<h2>Iteration 1 - 2-1-05</h2><p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 1<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user launches EigenMaze.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>EigenMaze is fully installed.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The main JFrame with menu bar and game world panel appears, and the 3D maze world
+	     renders in that window.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The operating system should handle failed program launch.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user launches the EigenMaze program from his file browser of choice.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>Opening and initializing the application environment; instrumental to all other user stories.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 2<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user looks at the screen before interacting with the program.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Story 1 is fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window renders a colored (perhaps randomly) three-dimensional maze and a similarly
+	     colored player object, probably a cube.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The game window does not display the maze or player object.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The program has been started.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>Each triangle that makes up the maze is drawn to the GLCanvas. Each triangle that makes
+	  up the player is drawn.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table style="text-align: left; margin-left: auto; margin-right: auto;" border="1" cellpadding="7" cellspacing="1">
+  <tbody>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%">USE CASE 3<br>
+      </td>
+      <td colspan="2" style="width: 77%; vertical-align: top;">
+      <p>The user uses the movement keys to interact with the game world.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Preconditions </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>User Stories 1 and 2 have been fulfilled.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Success End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The player object moves with predictable inertia in the direction of the movement keys
+	     pressed.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Fail End Condition </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>No failure mode has been identified.<br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Trigger </td>
+      <td colspan="2" valign="top" width="77%">
+      <p>The user presses the movement keys to indicate the direction the player object should
+	     move - W to accelerate forward, S to accelerate backward, A to turn left, D to turn right.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(204, 255, 255);" valign="top" width="23%"> Description</td>
+      <td colspan="2" valign="top" width="77%">
+	  <p>If the user presses the W or S button: the player is accelerated forward or backward by an amount
+	  equal to the time of frame times a constant value. If the user presses the A or D button: the user is
+	  rotated to the right or left by an amount equals to the time of frame times a constant value.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<br>
+</body></html>

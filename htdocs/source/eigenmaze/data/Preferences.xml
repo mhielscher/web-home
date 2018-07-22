@@ -1,0 +1,7 @@
+<Preferences>
+	<PlayerName>Restorer</PlayerName>
+	<WindowResolution>800x600</WindowResolution>
+	<DefaultMazeSize>5x5</DefaultMazeSize>
+	<Fullscreen>false</Fullscreen>
+	<EntityShadows>true</EntityShadows>
+</Preferences>

@@ -1,0 +1,28 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Peter Cappello">
+  <meta name="GENERATOR" content="Mozilla/4.73 [en] (Windows NT 5.0; I) [Netscape]">
+  
+  <title>Release History</title><link rel="stylesheet" href="releaseHistory_files/site.css" type="text/css"></head>
+
+<body>
+<h1>Release History<br>
+</h1>
+<h2>Version 1 &lt;date&gt;</h2>
+<h3><a href="http://www.cs.ucsb.edu/%7Ecappello/50/projects/projects/cs50project/document/UserStory1.html">User story 1</a></h3>
+<h3><a href="http://www.cs.ucsb.edu/%7Ecappello/50/projects/projects/cs50project/document/UserStory2.html">User story 2</a><br>
+</h3>
+<p>
+Insert the remainer of user stories associated with Version 1. They can
+be put inline, rather than each appearing on its own page.<br>
+</p>
+<h2>Version 2 &lt;date&gt;</h2>
+Put all the user stories associated with Version 2 here. They need not
+be done until after version 1 is released.<br>
+<h2>Version 3 &lt;date&gt;</h2>
+Put all the user stories associated with Version 3 here. They need not
+be done until after version 2 is released.
+<br>
+<br>
+</body></html>

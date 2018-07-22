@@ -1,0 +1,22 @@
+<Entity type="Projectile">
+	<Name>Bomb</Name>
+	<Model>data/models/bomb/bomb.obj</Model>
+	<ModelScale>0.25</ModelScale>
+	<SphereRadius>0.6</SphereRadius>
+	<Mass>75</Mass>
+	<Damage>40</Damage>
+	<Bounces>false</Bounces>
+	<Weathervane>true</Weathervane>
+	<BlastRadius>15</BlastRadius>
+	<Particles type="death">
+		<Size>60</Size>
+		<ColorMin>0.0,0.0,0.4</ColorMin>
+		<ColorMax>0.0,0.8,0.8</ColorMax>
+		<SpeedMin>10</SpeedMin>
+		<SpeedMax>30</SpeedMax>
+		<LifeMin>300</LifeMin>
+		<LifeMax>600</LifeMax>
+		<ScaleMin>0.25</ScaleMin>
+		<ScaleMax>1.0</ScaleMax>
+	</Particles>
+</Entity>

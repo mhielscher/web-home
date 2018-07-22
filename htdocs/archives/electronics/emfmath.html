@@ -1,0 +1,191 @@
+<HTML>  
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Mac">
+  <TITLE>EMF Math</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><TABLE WIDTH="100%" BORDER="0" CELLSPACING="2" CELLPADDING="0"
+HEIGHT="92">
+  <TR>
+    <TD WIDTH="100%" HEIGHT="16">
+      <P><CENTER><IMG SRC="title.jpg" WIDTH="360" HEIGHT="170" ALIGN="BOTTOM"
+      BORDER="0" NATURALSIZEFLAG="3"></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="100%" HEIGHT="51">
+      <P><CENTER><TABLE WIDTH="99%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT><A HREF="index.html">Home</A></TD> 
+          <TD WIDTH="160">
+            <P><CENTER><A HREF="theory.html">Theory</A></CENTER></TD>
+          <TD WIDTH="39%"><A HREF="links.html">Links</A></TD> 
+        </TR>
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT><A HREF="homescale.html">Home-Scale Coilgun</A></TD> 
+          <TD WIDTH="160">
+            <P><CENTER><A HREF="pictures.html">Picture Gallery</A></CENTER></TD>
+          <TD WIDTH="39%"><A HREF="handheld.html">Handheld Coilgun</A></TD> 
+        </TR>
+      </TABLE></CENTER></TD>
+  </TR>
+  <TR>
+    <TD HEIGHT="16">
+      <H2><CENTER>Electromagnetic Force Math<HR></CENTER></H2>
+	  <P>
+	  NOTE: This information is more complex than it should be, and
+	  probably not scientifically or unitarily correct. Refer to the
+	  coilgun <a href="graphics/coilgunpostersmall.gif">poster</a> for a better
+	  set of math, or <a href="mailto:restorer@pacificnet.net">bug me</a>
+	  to update this page.
+	  <hr>
+      <P>As you probably already know, current flowing through a wire
+      creates a magnetic field. If you make that wire into a loop,
+      the field is concentrated in the center of the loop. A solenoid
+      is simply a long coil of consecutive loops. This construction
+      creates a larger magnetic field that is relatively uniform inside
+      the coil, and is ideal for coilguns. The magnetic field at any
+      point along the axis of a loop of wire is:</P>
+
+      <P><CENTER><IMG SRC="equations/emf01.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[B = (mu0 I)/2R * (R/sqrt(R^2 + x^2))^3]"></CENTER></P>
+
+      <P>where <B>I</B> is the current, <B>R</B> is the radius of the
+      loop, <B>x</B> is the distance from the center of the loop, and
+      <B>&micro;0</B> is a constant equal to 4pi x 10^-7 Tesla-meters
+      per Amp. If we envision a solenoid as many loops of wire, we
+      can use Calculus to find the field at any point on the axis:</P>
+
+      <P><CENTER><IMG SRC="equations/emf02.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[dB = (mu0 R^2)/(2(x^2 + R^2)^(3/2)) I (N/L) dx]"><BR CLEAR="ALL"><IMG 
+      SRC="equations/emf03.jpg" ALIGN="BOTTOM" BORDER="0" ALT="[B = (mu0 I N)/(2L) * ((x+L/2)/sqrt((x+L/2)^2 + R^2) - ((x-L/2)/sqrt((x-L/2)^2 + R^2))]"></CENTER></P>
+
+      <P>where <B>N</B> is the number of turns of wire in the coil,
+      <B>L</B> is the length of the coil in meters, and <B>x</B> is
+      the distance from the center of the solenoid.</P>
+
+      <P>That gives us the magnitude of the magnetic field, but we
+      need to know the force it will produce on an iron projectile.
+      Let's look at it with dimensional analysis: Force is in Newtons,
+      which is kg-m/s^2. The magnetic field is given in Teslas, which
+      is equal to kg/(A-s^2). So to get Newtons, we need to multiply
+      the field by something with units of Amp-meters. What we need
+      to do in actuality is differentiate the field, as the pull on
+      the projectile depends on the amount the field <I>changes</I>
+      - a uniform B-field does not exert translational force. If we
+      differentiate the field with respect to distance from the center,
+      we get units of T/m. Now we need to multiply by something with
+      units of Am^2.</P>
+
+      <P><CENTER><IMG SRC="graphics/bhcurve.jpg" WIDTH="300" HEIGHT="183" ALIGN="BOTTOM"
+      BORDER="0" NATURALSIZEFLAG="3" ALT="[B-H Curve]"></CENTER></P>
+
+      <P>A ferromagnetic object has a very high permeability in fields
+      of less than 20 gauss (0.002 Tesla), but begins to saturate in
+      higher fields. Relative permeability is a unitless value and
+      is the amount that a certain material will increase the field
+      strength: a permeability of 1000 will mean that the magnetic
+      field in and very near to that material will be 1000 times the
+      strength than without. Iron and steel typically have relative
+      permeabilities from 2000 to 5000. Since we generally use fields
+      greater than 5000 gauss, the permeability (also known as susceptability)
+      is less than 0.075% of its maximum (around 2-3 in steel with
+      a maximum permeability of 4000). I've found a handy estimation
+      for the shape and magnitude of the B-H curve:</P>
+
+      <P><CENTER><IMG SRC="equations/emf04.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[B = (1-e^(-S*c*H))^2 + mu0*H]"><BR CLEAR="ALL"><IMG SRC="equations/emf05.jpg"
+      ALIGN="BOTTOM" BORDER="0" ALT="[perm. = B/(mu0*H)]"></CENTER></P>
+
+      <P><B>H</B> is the magnetic field intensity, or simply B/mu0
+      - that is, the B that would result without using iron divided
+      by mu0. Not only does this give a workable, simple approximation,
+      but it comes in really handy when you start to integrate again.
+      Now why is all this important to coilgunning? The dipole moment
+      can be calculated if we know the percent magnetization of the
+      projectile, and the dipole moment has units of Am^2, which we
+      can multiply by the above dB/dx to get units of Newtons. The
+      percent magnetization is simply:</P>
+
+      <P><CENTER><IMG SRC="equations/emf06.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[%magnetization = (1-e^(-ScH))^2]"></CENTER></P>
+
+      <P>where <B>S</B> is the maximum relative permeability of the
+      iron, and <B>c</B> is 3.086 x 10^-6. This yields units of A/m,
+      and is the magetization per unit volume - mag/m^3. So to get
+      absolute magnetization, and Am^2, we can multiply by the volume
+      of the projectile. We now have our equation for the force on
+      a theoretical projectile:</P>
+
+      <P><CENTER><IMG SRC="equations/emf07.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[F = volume * mag. * dB/dx]"></CENTER></P>
+
+      <P>Notice now that this does <B>not</B> take into account the
+      length of the projectile in calculations for dB/dx, and is therefore
+      only applicable to a projectile with infintesimal length, but
+      finite volume. Not too realistic, eh?</P>
+
+      <P>Now we can get back to the calculus to find the force on a
+      projectile with finite length. A good place to start is, once
+      again, dimensional analysis. Since the field changes nonuniformly
+      over any given interval we know that we will have to integrate
+      over the length of the projectile. Since integration would have
+      the same effect on units as multiplying by the length, we will
+      need an expression with units of N/m, which when integrated will
+      give Newtons. So we need to find the force per unit length. An
+      easy way to do this is to use the cross-sectional area of the
+      projectile instead of the volume, assuming your projectile is
+      a cylinder of constant diameter. Our equation is now:</P>
+
+      <P><CENTER><IMG SRC="equations/emf08.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[Force/length = area * mag. * dB/dx]"></CENTER></P>
+
+      <P>The steps of integration are shown below:</P>
+
+      <P><CENTER><IMG SRC="equations/emf09.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[S[a/b](pi r^2 * ((1-e^(-4000cH))^2)/mu0 * dB/dx) dx]"><BR
+      CLEAR="ALL"><IMG SRC="equations/emf10.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[= (pi*r^2)/mu0 * S[a/b]((1-e^-4000cH)^2 * dB/dx) dx]"></CENTER></P>
+
+      <P>Now let C = -4000*<B>c</B>*<B>&micro;0</B>. This will let
+      us change <B>H</B> into terms of <B>B</B>, and simplify the math:</P>
+
+      <P><CENTER><IMG SRC="equations/emf11.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[= (pi*r^2)/mu0 * S[a/b]((1 - 2e^CB + e^2CB)*B') dx]"><BR
+      CLEAR="ALL"><IMG SRC="equations/emf12.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[= (pi*r^2)/mu0 * S[a/b](B' dx) - S[a/b](2B'e^CB dx) + S[a/b](B'e^2CB dx)]"><BR
+      CLEAR="ALL"><IMG SRC="equations/emf13.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[= (pi*r^2)/mu0 * (B(b) - B(a) - (2/C)(e^CB(b) - e^CB(a)) + (1/2C)(e^2CB(b) - e^2CB(a)))]"></CENTER></P>
+
+      <P>Notice how the expression with <B>e</B> came in handy - it
+      fits the distribution of <B>B'</B> very well! Because we are
+      integrating along the length of the projectile, and point <B>x</B>
+      is the center of our projectile:</P>
+
+      <P><CENTER><IMG SRC="equations/emf14.jpg" ALIGN="BOTTOM" BORDER="0"
+      ALT="[a = x - L/2], [b = x + L/2]"></CENTER></P>
+
+      <P>From there it's all plugging in values and computing the answer.
+      Now you can find the force on a ferromagnetic object with a cylindrical
+      shape due to a solenoid. In my simulator, I do a repetitive process,
+      calculating the force every 30 microseconds, adding that to the
+      running total to find the velocity, which I add to another total
+      to find position; and then it all starts over. I'm sure there's
+      a way of doing it with more integrals, but I'm not interested
+      in that yet. I'm quite content with a repetitive version, just
+      as long as the computer does all the work and not me!</P>
+
+      <P><B><FONT COLOR="#ff0000" SIZE="+1">Calculations for changing
+      inductance and work done on the projectile will come as soon
+      as I can get them working!</FONT></B>
+    </TD>
+  </TR>
+</TABLE></P>
+
+<P><CENTER>Maintained by <A HREF="mailto:restorer@pacificnet.net">Matthew
+Hielscher</A><BR CLEAR="ALL">Last updated: 4/18/04</CENTER>
+
+</BODY>
+</HTML>

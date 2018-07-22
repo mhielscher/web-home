@@ -1,0 +1,8 @@
+One important note:
+This directory does not include all files required for building SILC Aqua.
+Use this directory only for browsing the source; if you want to compile
+SILC Aqua, download silc.tar.gz in the parent directory. The tarball includes
+important files like the project file and nib files.
+
+SILC Aqua also requires installation of the SILC toolkit, obtainable from
+http://silcnet.org/software/developers/toolkit/.

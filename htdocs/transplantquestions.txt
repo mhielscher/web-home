@@ -1,0 +1,144 @@
+For the evaluation:
+
+[put questions on phone, use recording app when asking questions]
+
+Can I email you or someone else specific questions? I have a lot here. :)
+For the transplant coordinator: Can I email you questions as I think of them?
+Can I get in touch with {you|my coordinator|the transplant team} by email? Email is much easier for me than the phone.
+I need phone numbers for keeping up with the clinic - inquiring about status of tests, donor matches, etc.
+**What kind of anti-rejection protocols do you use?**
+How quickly will the prednisone be tapered down? Being young, I'm worried about long-term side effects.
+What is your policy for staying active vs. inactive on the list? (vs. e.g. CPMC)
+What happens to a transplanted kidney after it fails?
+Can you give me [right now, here, not mailed] a list of tests I'll need?
+For the second blood typing, will you accept results from one of my other transplant centers? Will you accept a tube I draw myself (before home hemo) and mail to you?
+What is the donor-to-recipient procedure? By the time I'm called in, has the kidney already been removed? What is the typical cold ischemic time? [local 12-21 hrs, shared 22-31 hrs]
+Is there anything I would need to notify you of immediately between now and when I'm approved {and transferred to the active list coordinator}?
+What will my support people have to do while I'm IN the hospital post-transplant?
+What responsibilities will my support people have during lab/clinic visits other than driving?
+How do wait times work now, with the new allocation system and effective list date backdated to dialysis start time?
+What about clinical trials? Can I look at a list of all of them, and inquire about any that look interesting to me?
+Is there anything I can do to get a living donor; anything the hospital supports? Campaigns, etc?
+Do you tend to prescribe CellCept or Myfortic more often? What would prompt you to switch from one to the other?
+
+Less important questions:
+I want as much reading material as possible, no matter how complex. I can handle it. Antirejection protocols, donor criteria, etc.
+When testing donors, is there a way to tell how much a certain donor kidney will increase my antibodies for future transplants?
+Will I be able to come off the prednisone at any point? I'm concerned about long-term side effects.
+I'd like to know about a "steroid withdrawal" or "steroid free" protocol. Would that be an option for me? If not immediately, can I be taken off prednisone entirely later on?
+Will I have a chance to discuss my treatment, and especially drug, plan before and immediately after my transplant, or will I be locked into whatever you decide is "best" for me, or conventional/standard? [e.g. careful control of blood pressure, nighttime BP meds)
+
+
+Before the transplant:
+
+Are there any vaccinations I should get first? Pneumonia? Pertussis? Will I be checked for antibodies for infections that I won't be able to be vaccinated for after a transplant?
+What is dangerous for the kidney?
+Can you give me a list of dates that I need to come in [for morning clinics, blood draws, surgical follow-ups, etc.]?
+[Will I be able to see the kidney?]
+Will someone be taking pictures? Will there be video/audio? Can I see them?
+Should I avoid someone who's recently had certain vaccines? Which vaccines, and for how long?
+Will there be a strict diet for some period after my transplant (low-microbe etc.)? For how long? Will I also need to wear a mask and take extra precautions around people?
+Would I be able to get someone to sign off on a comprehensive allergy test as medically necessary, for the purposes of reducing immune system activity?
+
+
+When I get The Call:
+[see also devel/gotthecall/transplantquestions.txt]
+
+First: how soon do I have to be there?
+    [CPMC]: I'm in Sacramento, I can be there in about 2 hours.
+    [UCLA]: I'm in Sacramento. I can be there in 7 hours if I drive; I'm looking at last-minute flights right now that might get me there quicker.
+    [UCD]: I'm in Citrus Heights, I can be there in 30-45 minutes (up to an hour in traffic).
+What is the antigen match with me?
+Do you have information on the donor?
+    What is the KDPI (Kidney Donor Profile Index)? [KDPI is a percentile]
+    Age, height, weight, male/female? (Estimate "strength" of kidney based on TBW)
+    Virus status? CMV, Epstein-Barr, Hep B, Hep C?
+    Cause of death?
+    [Calculate TBW - fill in, paste into calc]
+        sex="male"; age=50; height=166; weight=60; african_american=0;
+        (sex=="male" ? (2.447 - (0.09516 * age) + 0.1074 * height + 0.3362 * weight) : (-2.097 + (0.2466 * weight) + (0.1069 * height))) * 0.824 * ((sex=='male' ? 0.998 : 0.985) * max(1, age-50)) * (sex=='male' ? 1 : 1.033) * (african_american ? 1.043 : 1)
+Current cold ischemia time?
+    [Mean: 22.6 hr; beware anything over 24 hrs at arrival time]
+How many other people are being called for this kidney?
+What are my chances of getting this kidney if I make it there in time?
+What's the address and where do I park?
+    I can get directions with the address faster than you can give them to me; I'm in front of a computer right now.
+
+
+After transplant:
+
+What kind of diet restrictions will I have? What foods are "risky"?
+How strictly should I avoid "risky" foods, and for how long?
+What about active fermented foods, probiotics? Natural pickles, miso, tempeh, raw sauerkraut?
+    - Dry cured sausage?
+    - Shelf-stable packaged sausage (summer sausage)?
+    - Shelf-stable processed cheese?
+    - Shelf-stable smoked fish/meat?
+    - Cold-smoked fish (lox)?
+    - Young cheese? Aged cheese? Aged cheese made with raw milk?
+    - Sliced-to-order deli meats and cheeses?
+    - Home-dried jerky?
+    - Where do I look for specific information on this?
+    - Everything I've found on specifically post-transplant diets is pretty vague - no buffets or salad bars, no "undercooked" meat/seafood/eggs, wash fresh fruits & vegetables well... but they're guidelines, and aren't backed by any specific data or even specific suggestions.
+    - I've found more specific guides on "immunosuppressed" diets, for people on chemotherapy and/or radiation, but I assume that's more strict because they tend to be more immunosuppressed.
+Is it more necessary for me to avoid large amounts of oxalate from e.g. spinach and sorrel, or other potentially stone-forming salts?
+I've heard that continuing to take antirejection drugs after a transplant has failed will keep me from developing a higher PRA level. Do you know anything about that?
+Can you recommend resources for researching the safety (with a transplant, e.g. nephrotoxicity; or interactions) of various medicinal herbs/nuts/seeds? I sometimes eat Chinese and Korean things that are considered medicinal, or aren't generally eaten in the US, and haven't been studied against ESRD or transplant, at least not in English. (Not because I'm trying to use them as medicine, just because they're in foods that I like.)
+Am I immunocompromised enough to no longer benefit from certain vaccinations? Will I continue to be once I'm on a stable long-term regimen? Do I need to be careful around groups that are more likely to pass major diseases?
+
+
+
+Also things to keep in mind:
+"Smile, nod, and don't volunteer shit!  Resist the temptation to fill in that blank space when they pause after you answer a question."
+Keep pressure on the doctors and nurses to cut immunosuppressants down or change to others, depending on side effects.
+Keep a log of who you talk to with regards to getting messages to doctors and asking about symptoms, side effects, med changes.
+BRING LIST OF MEDS AND OTHER INFORMATION THEY MIGHT NEED
+KEEP A LOG of names, interviews at the evaluation
+note listing dates: inactive, active
+note tests and dates
+
+
+
+Possible questions and answers: (UCLA)
+Q: When you have this transplant, who would be your transportation and caretaker?
+A: My mom, unless she's approved to be my donor, then it would be my sister or my dad.
+Q: Do you have any potential donors?
+A: Yes. My mom's here today, and I have another interested donor who's across the country right now. How does she get started testing?
+Q: How is dialysis going for you?
+A: It's going okay. It would be nice to get off it, though. :)
+Q: No problems?
+A: Nope, things have been fairly routine recently.
+Q: Any problems with depression or anxiety?
+A: No. Just a bit nervous before this evaluation. :)
+Q: Any problems sleeping?
+A: A week ago I wasn't sleeping very well, I guess because I was anxious about transplant things - my doctor prescribed something for it, and I've slept well the past week. [Only if I actually get something good.]
+A: Yeah... I've been taking Benadryl, but it stopped helping recently and I haven't had a chance to talk to my nephrologist about it yet.
+
+Possible questions and answers: (Cal Pacific)
+Q: When you have this transplant, who would be your transportation and caretaker?
+A: Depending on who my donor is (if I have a living donor), my transportation will be one of my roommates, my caretaker will be one of my roommates (same or other) and/or family who might stay up here for a short time.
+Q: Do you have any potential donors?
+A: Yes. My mom want to donate, and my friend/roommate also wants to donate, though she's across the country at school right now. How do they start the process?
+Q: How is dialysis going for you?
+A: It's going okay. Not nearly as nice as PD. It would be nice to be done with it. :)
+Q: No problems?
+A: Nope, things have been fairly routine recently.
+Q: Any problems with depression or anxiety?
+A: Nope.
+Q: Your financial state/medical coverage is adequate?
+A: I have Medicare, Aetna, and Medi-Cal, so my insurance coverage is good. I'm kind of living between SSI checks for the rest of my finances, but with the transplant, surely my family will help out with that when I need it.
+Q: [after asking about a steroid-free regimen] Have you had problems with prednisone and side effects?
+A: I've never taken prednisone, but I do become sensitized [maybe look up at better term] to medications rather quickly. I've had problems with effectiveness vs. side effects with painkillers, clonidine, and some sedatives. I'd be worried that coming off the prednisone later would be much harder for me.
+
+
+
+Info:
+A member of the transplant team will perform a complete history and physical, review previous test results and decide if any further tests are required. A team member will determine whether you are a candidate for surgery and address any issues that may affect the surgery itself. The transplant team will communicate with your kidney doctor, keep records up-to-date, and be your contact person to answer questions. Information about the transplant evaluation, listing process and waiting time periods will be provided by the transplant coordinator, as well as the options of living donor or cadaveric transplant. An assessment of your emotional well-being, transportation, housing and financial resources will be made by the social worker with involvement by the financial counselor, if necessary.
+
+Tests and examinations that will be performed at UCLA include:
+- Transplant medical and surgical evaluation
+- Psychosocial evaluation
+- Blood typing
+- Tissue type identification and antibody screening
+- Tissue type identification, blood type identification, and crossmatch test of any potential donor
+

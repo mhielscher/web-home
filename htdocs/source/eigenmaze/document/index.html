@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>EigenMeat</title>
+  <link rel="stylesheet" href="files/home.css" type="text/css"></head>
+
+<body>
+	<h1>Project: EigenMaze<br>
+</h1>
+<h2>Team EigenMeat</h2>
+<br>
+<table style="margin-left: auto; margin-right: auto; text-align: left;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255);"><big>Member
+name</big><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(204, 255, 255);"><big>E-mail</big><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Nick Childers<br>
+      </td>
+      <td style="vertical-align: top;">nickchilders@umail.ucsb.edu<br>
+      </td>
+    </tr>
+    <tr>
+	    <td style="vertical-align: top;">Sean Ford<br>
+      </td>
+      <td style="vertical-align: top;">sean@isroot.com<br>
+      </td>
+    </tr>
+    <tr>
+	    <td style="vertical-align: top;">Andre Price<br>
+      </td>
+      <td style="vertical-align: top;">zeroamp@umail.ucsb.edu<br>
+      </td>
+    </tr>
+    <tr>
+	    <td style="vertical-align: top;">Matt Hielscher<br>
+      </td>
+      <td style="vertical-align: top;">mhielscher@umail.ucsb.edu<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<ul>
+  <li><a href="files/VisionTemplate.html">Vision statement<br>
+    </a></li>
+  <li><a href="files/releaseHistory.html">Release history</a><br>
+  </li>
+  <li><a href="javadoc/index.html">Javadoc</a><br>
+  </li>
+</ul>
+<hr style="width: 100%; height: 2px;">
+<p>EigenMaze will be a 3d multiplayer action game. It will take place in a randomly generated maze where players are free to roam around, and complete certain activities, such as killing each other, or a possible capture the flag type of game.</p>
+<p>
+<b>Compiling and Running:</b>
+<p>
+Compiling and running EigenMaze can be accomplished by simply executing the "run" target of the Ant build file. For example:<br>
+<ul>$ ant run</ul>
+<b>Note:</b> EigenMaze requires the latest version of the <a href="https://jogl.dev.java.net/">JOGL</a> library to interface with OpenGL. The "run" target automatically compiles and runs EigenMaze with the bundled Mac version of JOGL, so no extra installing should be necessary.
+<p>
+<b>Distribution:</b>
+<p>
+The "jar-executable" Ant target will build a semi-standalone jar file for EigenMaze that will also use the bundled JOGL libraries.
+The "executeJar" Ant target will run this standalone jar file. To run the executable jar outside of the project directory, it must be in the same directory as a lib folder which contains the native library (libjogl.jnilib, libjogl.so, jogl.dll), and the command issued must be: <i>java -Djava.library.path=lib -jar EigenMazeExe.jar</i>. For example:
+<ul>$ ant jar-executable<br>
+$ ant executeJar</ul>
+<hr style="width: 100%; height: 2px;">
+<br>
+</body></html>
