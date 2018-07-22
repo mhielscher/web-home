@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /food/
-RewriteRule equivalences.html /food/equivalence.html [R=301,L]
-</IfModule>
-
