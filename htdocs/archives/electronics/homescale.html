@@ -1,0 +1,154 @@
+<HTML>  
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Mac">
+  <TITLE>Matt's Coilgun Center - Home-Scale Coilgun</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><TABLE WIDTH="100%" BORDER="0" CELLSPACING="2" CELLPADDING="0"
+HEIGHT="92">
+  <TR>
+    <TD WIDTH="100%" HEIGHT="16">
+      <P><CENTER><IMG SRC="title.jpg" WIDTH="360" HEIGHT="170" ALIGN="BOTTOM"
+      BORDER="0" NATURALSIZEFLAG="3"></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="100%" HEIGHT="51">
+      <P><CENTER><TABLE WIDTH="99%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT><A HREF="index.html">Home</A></TD> 
+          <TD WIDTH="160">
+            <P><CENTER><A HREF="theory.html">Theory</A></CENTER></TD>
+          <TD WIDTH="39%"><A HREF="links.html">Links</A></TD> 
+        </TR>
+        <TR>
+          <TD WIDTH="39%">
+            <P ALIGN=RIGHT>Home-Scale Coilgun</TD> 
+          <TD WIDTH="160">
+            <P><CENTER><A HREF="pictures.html">Picture Gallery</A></CENTER></TD>
+          <TD WIDTH="39%"><A HREF="handheld.html">Handheld Coilgun</A></TD> 
+        </TR>
+      </TABLE></CENTER></TD>
+  </TR>
+  <TR>
+    <TD HEIGHT="16">
+      <H2><CENTER>Home-Scale Coilgun<HR></CENTER></H2>
+
+      <P><CENTER><A HREF="graphics/largemodel.gif"><FONT SIZE="+1">Schematic</FONT></A></CENTER></P>
+
+      <FONT COLOR="#006000">April 26, 2004 - </FONT> There will be
+	  more on this page shortly. I don't currently have access to my
+	  coilguns, but I will in two weeks. This is the most recent update.
+	  <p>
+	  
+	  <P>My home-scale coilgun will be designed to fire a 40mm long,
+      2mm diameter iron projectile at around 55 m/sec. This will acheive
+      a distance of around 54 feet when fired from 3 feet above the
+      ground, and will hit the ground after approximately 0.305 second.
+      It will operate from a rectified isolation transformer (170v
+      DC) and charge 25 1000uf capacitors for a total of 361.25 joules.
+      The coil will be wound from AWG 17 magnet wire and will ultimately
+      be triggered by an optosensor circuit and have multiple stages.
+      The coil will be conducting while the sensor is blocked, so I
+      will use a solenoid of some sort to give the projectile an initial
+      velocity.</P>
+
+      <P><TABLE WIDTH="99%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <TR>
+          <TD WIDTH="76%">
+            <P>I have my isolation transformer, 15 capacitors, and my AWG
+            17 coil set up now. I think I'll mount the coil and switch on
+            a swivel-mount for a turret effect or on a semi-mobile rifle-style
+            skeleton connected to the capacitors by long wires. My last operating
+            setup consisted of an 800v 1A diode rectifying the output of
+            the transformer. This 170v DC was fed into a 160uF photoflash
+            cap, a 470uF 200v cap I got out of a TV, and two pairs of series
+            connected 470uF 100v caps (a total of 470uF 200v). This gave
+            me 15.9 joules, and I acheived 4 m/sec. Ugh, a measly 0.2% efficiency.
+            Then again, I was using an incredibly bad coil. I hope I can
+            determine the mass of my projectiles and the exact voltage on
+            the capacitors soon, so I can calculate my efficiency.</P>
+			<p>
+            <B><FONT COLOR="#ff0000">Update! </FONT></B>I have decided
+            to use <A HREF="graphics/multistage.gif">this multistage schematic</A>
+            as my final destination. Therefore the IGBT Step has been replaced
+            with a pulsed SCR step. I have also lowered the efficiency requirements
+            for each stage, as efficiency is seeming much harder to attain
+            and I am limited by 1000uF steps in the capacitors for now.
+          </TD>
+          <TD WIDTH="24%">
+            <P><CENTER><A HREF="pictures/newsetup.jpg"><IMG SRC="thumbnails/newsetup.jpg"
+            WIDTH="160" HEIGHT="120" ALIGN="BOTTOM" BORDER="2" NATURALSIZEFLAG="3"></A></CENTER></TD>
+        </TR>
+      </TABLE></P>
+
+      <P><TABLE WIDTH="100%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <TR>
+          <TD WIDTH="25%">
+            <P><CENTER><A HREF="pictures/newcoil.jpg"><IMG SRC="thumbnails/newcoil.jpg" 
+            WIDTH="160" HEIGHT="120" ALIGN="BOTTOM" BORDER="2" NATURALSIZEFLAG="3"></A></CENTER></TD>
+          <TD WIDTH="75%">
+            <P>I plan to bring this coilgun through several stages before
+            the final version (to give me time to make some money).</P>
+
+            <UL>
+              <LI>Partial Test: A test of a few of my components - <B><FONT
+               COLOR="#009900">At least one of all crucial components tested!
+              (Done)</FONT></B>
+              <LI>Coil Test: A test of a 17 AWG coil recommended by the <A
+              HREF="http://web2.airmail.net/jd4usa/index.htm">MGC</A> - <B><FONT
+               COLOR="#009900">Done!</FONT></B>
+              <LI>Full Test: A test of at least 15 capacitors and all other
+              components - <B><FONT COLOR="#009900">Done!</FONT></B>
+              <LI>SCR Switch: An SCR switch is implemented - <B><FONT COLOR="#009900">Done!</FONT></B>
+              <LI>SCR Optimization: The coilgun acheives 1% or better efficiency
+              w/ an SCR - Not Done
+              <LI>Pulsed SCR Switch: Two SCRs are used with a pulse generator
+              to turn the current on <I>and</I> off - Not Done
+              <LI>Optodetector Switch: An optodetector circuit uses two SCRs
+              to activate the gun - Not Done
+              <LI>Optodetector Optimization: The optodetector switch acheives
+              1.5% efficiency or better - Not Done
+              <LI>Dual-Stage Implementation: A second coil is wound, attached,
+              and tested - Not Done
+              <LI>Tri-Stage Implementation: A third coil is wound, attached,
+              and tested - Not Done
+              <LI>Tri-Stage Optimization: A three-stage setup acheives 2.5%
+              total efficiency or better - Not Done
+            </UL>
+
+            <P>The third stage will be the largest step up, and I doubt I
+            can even acheive it. If I do, however, my hobby will indeed be
+            powerful, firing at between 67 m/sec and 126 m/sec, depending
+            on the mass of my projectile (which I still haven't determined!).
+          </TD>
+        </TR>
+      </TABLE></P>
+
+      <BLOCKQUOTE>
+        <BLOCKQUOTE>
+          <H3>Progress:</H3>
+          <UL>
+            <LI>Able to fire - <B><FONT COLOR="#009900">Done</FONT></B>
+            <LI>Able to knock over a can - <B><FONT COLOR="#009900">Done</FONT></B>
+            <LI>Able to puncture a can and stick - <FONT COLOR="#000099">Not
+            Quite</FONT>
+            <LI>Able to puncture a can straight through and knock it over
+            - Not Done
+            <LI>Able to puncture a can straight through <B>without</B> knocking
+            it over - Not Done
+            <LI>Able to stick 1&quot; into a piece of wood - Not Done
+            <LI>Able to blast right through a piece of wood - Not Gonna Happen
+          </UL>
+        </BLOCKQUOTE>
+      </BLOCKQUOTE>
+    </TD>
+  </TR>
+</TABLE><HR ALIGN=LEFT></P>
+
+<P><CENTER>Maintained by <A HREF="mailto:restorer@pacificnet.net">Matthew
+Hielscher</A><BR CLEAR="ALL">Last updated: 4/26/04</CENTER>
+
+</BODY>
+</HTML>
